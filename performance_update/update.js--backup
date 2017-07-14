@@ -1,0 +1,105 @@
+exports.modelChanged = function(db,db_pr)
+{
+	var obLength = Object.keys(db).length;
+	var allTables = ['meeting'];
+	var p_keys = { "meeting" : "meeting_id"  }
+		var modelsChanged = [];
+		 Object.keys(db).forEach(function(modelName) {
+			if(db[modelName] && allTables.indexOf(modelName) != -1){
+				var mN = db_pr[modelName];
+
+				db[modelName].findAndCountAll({
+					     where: { last_updated : { 	$gte: 1466423624984 }  }
+  						//attributes: { exclude: ['meeting_id'] }
+				}).then(function(records)
+				{
+
+					//console.log("meeting is -->"+JSON.stringify(records.rows));
+                    
+					if(records.count > 0)
+					{
+
+						 var tempJson = JSON.stringify(records.rows);
+						 var tempObject = JSON.parse(tempJson);
+
+						 for(var i in tempObject)
+						 {
+                            console.log("Model name --->"+modelName);
+                            var key = p_keys[modelName];
+						 	var mObject = tempObject[i];
+						 	console.log("meeting ids-->"+p_keys[modelName]);
+						 	console.log("meeting ids-->"+mObject[key]);
+
+						 	var whereObject = {  };
+						 	whereObject[p_keys[modelName]] = mObject[key];
+
+						 	
+
+                           db_pr[modelName].findOne({
+
+                           	where: whereObject
+                           }).then(function(mO)
+                           {
+
+                           	    if(mO[p_keys[modelName]])
+                           	    {
+
+
+                                     db_pr[modelName].update(mObject,{
+
+                                     	where: whereObject
+                                     }).then(function(up)
+                                     {
+                                     	console.log("updated");
+
+                                     });
+                           	    	
+                           	    }else
+                           	    {
+
+                           	    	db_pr[modelName].create(mObject).then(function(cr)
+                           	    	{
+                           	    		console.log("created !!!!");
+
+                           	    	});
+
+                           	    }
+
+                           });
+
+
+						 }
+						 
+
+							// db_pr[modelName].bulkCreate(JSON.parse(tempJson)).then(function()
+							// {
+
+							// 	//console.log("meeting is -->"+tempJson);
+
+							// });
+
+
+
+					}
+
+
+				}).catch(function(err)
+				{
+					console.log("error is -->"+err);
+				});
+			}
+		 
+
+		});
+
+
+		
+			
+   
+
+   
+}
+
+
+
+

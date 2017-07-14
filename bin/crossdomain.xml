@@ -1,0 +1,5 @@
+<cross-domain-policy>
+    <allow-http-request-headers-from domain="localhost:8888" headers="*"/>
+    <site-control permitted-cross-domain-policies="all"/>
+    <allow-access-from domain="*" secure="false"/>
+</cross-domain-policy>

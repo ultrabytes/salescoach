@@ -1,0 +1,136 @@
+Request Object (Time:  Sat May 13 2017 05:52:07 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/product_settings?account_id=32","Method":{"get":true},"Params":{},"Query":{"account_id":"32"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 05:52:07 GMT+0000 (UTC)) 
+[{"ProductSettingId":29,"ProductType":1,"AmountAs":1,"TrackedAs":0,"Status":1,"Resell":1,"InitialCreate":1490168581413,"LastUpdated":1490684750666}]
+
+
+
+Request Object (Time:  Sat May 13 2017 05:52:17 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/product_settings?account_id=32","Method":{"get":true},"Params":{},"Query":{"account_id":"32"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 05:52:17 GMT+0000 (UTC)) 
+[{"ProductSettingId":29,"ProductType":1,"AmountAs":1,"TrackedAs":0,"Status":1,"Resell":1,"InitialCreate":1490168581413,"LastUpdated":1490684750666}]
+
+
+
+Request Object (Time:  Sat May 13 2017 07:09:29 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/product_settings?account_id=32","Method":{"get":true},"Params":{},"Query":{"account_id":"32"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:09:29 GMT+0000 (UTC)) 
+[{"ProductSettingId":29,"ProductType":1,"AmountAs":1,"TrackedAs":0,"Status":1,"Resell":1,"InitialCreate":1490168581413,"LastUpdated":1490684750666}]
+
+
+
+Request Object (Time:  Sat May 13 2017 07:13:31 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/product_settings?account_id=32","Method":{"get":true},"Params":{},"Query":{"account_id":"32"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:13:31 GMT+0000 (UTC)) 
+[{"ProductSettingId":29,"ProductType":1,"AmountAs":1,"TrackedAs":0,"Status":1,"Resell":1,"InitialCreate":1490168581413,"LastUpdated":1490684750666}]
+
+
+
+Request Object (Time:  Sat May 13 2017 07:38:10 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/product_settings?account_id=32","Method":{"get":true},"Params":{},"Query":{"account_id":"32"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:38:10 GMT+0000 (UTC)) 
+[{"ProductSettingId":29,"ProductType":1,"AmountAs":1,"TrackedAs":0,"Status":1,"Resell":1,"InitialCreate":1490168581413,"LastUpdated":1490684750666}]
+
+
+
+Request Object (Time:  Wed May 17 2017 08:10:20 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/product_settings?account_id=42","Method":{"get":true},"Params":{},"Query":{"account_id":"42"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 08:10:20 GMT+0000 (UTC)) 
+[{"ProductSettingId":36,"ProductType":1,"AmountAs":0,"TrackedAs":0,"Status":1,"Resell":0,"InitialCreate":1494583148526,"LastUpdated":1494583815231}]
+
+
+
+Request Object (Time:  Wed May 17 2017 08:10:28 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/product_settings?account_id=42","Method":{"get":true},"Params":{},"Query":{"account_id":"42"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 08:10:28 GMT+0000 (UTC)) 
+[{"ProductSettingId":36,"ProductType":1,"AmountAs":0,"TrackedAs":0,"Status":1,"Resell":0,"InitialCreate":1494583148526,"LastUpdated":1494583815231}]
+
+
+
+Request Object (Time:  Wed May 17 2017 17:29:26 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/product_settings?account_id=42","Method":{"get":true},"Params":{},"Query":{"account_id":"42"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:29:26 GMT+0000 (UTC)) 
+[{"ProductSettingId":36,"ProductType":1,"AmountAs":0,"TrackedAs":0,"Status":1,"Resell":0,"InitialCreate":1494583148526,"LastUpdated":1494583815231}]
+
+
+
+Request Object (Time:  Wed May 17 2017 17:29:35 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/product_settings?account_id=42","Method":{"get":true},"Params":{},"Query":{"account_id":"42"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:29:35 GMT+0000 (UTC)) 
+[{"ProductSettingId":36,"ProductType":1,"AmountAs":0,"TrackedAs":0,"Status":1,"Resell":0,"InitialCreate":1494583148526,"LastUpdated":1494583815231}]
+
+
+
+Request Object (Time:  Thu May 18 2017 05:31:32 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/product_settings?account_id=42","Method":{"get":true},"Params":{},"Query":{"account_id":"42"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:31:32 GMT+0000 (UTC)) 
+[{"ProductSettingId":36,"ProductType":1,"AmountAs":0,"TrackedAs":0,"Status":1,"Resell":0,"InitialCreate":1494583148526,"LastUpdated":1494583815231}]
+
+
+
+Request Object (Time:  Thu May 18 2017 05:31:40 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/product_settings?account_id=42","Method":{"get":true},"Params":{},"Query":{"account_id":"42"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:31:40 GMT+0000 (UTC)) 
+[{"ProductSettingId":36,"ProductType":1,"AmountAs":0,"TrackedAs":0,"Status":1,"Resell":0,"InitialCreate":1494583148526,"LastUpdated":1494583815231}]
+
+
+
+Request Object (Time:  Thu May 18 2017 06:03:26 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/product_settings?account_id=42","Method":{"get":true},"Params":{},"Query":{"account_id":"42"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:03:26 GMT+0000 (UTC)) 
+[{"ProductSettingId":36,"ProductType":1,"AmountAs":0,"TrackedAs":0,"Status":1,"Resell":0,"InitialCreate":1494583148526,"LastUpdated":1494583815231}]
+
+
+
+Request Object (Time:  Thu May 18 2017 06:03:36 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/product_settings?account_id=42","Method":{"get":true},"Params":{},"Query":{"account_id":"42"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:03:36 GMT+0000 (UTC)) 
+[{"ProductSettingId":36,"ProductType":1,"AmountAs":0,"TrackedAs":0,"Status":1,"Resell":0,"InitialCreate":1494583148526,"LastUpdated":1494583815231}]
+
+
+
+Request Object (Time:  Thu May 18 2017 08:59:26 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/product_settings?account_id=42","Method":{"get":true},"Params":{},"Query":{"account_id":"42"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 08:59:26 GMT+0000 (UTC)) 
+[{"ProductSettingId":36,"ProductType":1,"AmountAs":0,"TrackedAs":0,"Status":1,"Resell":0,"InitialCreate":1494583148526,"LastUpdated":1494583815231}]
+
+
+
+Request Object (Time:  Thu May 18 2017 10:05:23 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/product_settings?account_id=42","Method":{"get":true},"Params":{},"Query":{"account_id":"42"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 10:05:23 GMT+0000 (UTC)) 
+[{"ProductSettingId":36,"ProductType":1,"AmountAs":0,"TrackedAs":0,"Status":1,"Resell":0,"InitialCreate":1494583148526,"LastUpdated":1494583815231}]
+
+
+
+Request Object (Time:  Thu May 18 2017 10:05:30 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/product_settings?account_id=42","Method":{"get":true},"Params":{},"Query":{"account_id":"42"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 10:05:30 GMT+0000 (UTC)) 
+[{"ProductSettingId":36,"ProductType":1,"AmountAs":0,"TrackedAs":0,"Status":1,"Resell":0,"InitialCreate":1494583148526,"LastUpdated":1494583815231}]
+
+
+
+Request Object (Time:  Thu May 18 2017 16:06:44 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/product_settings?account_id=42","Method":{"get":true},"Params":{},"Query":{"account_id":"42"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 16:06:44 GMT+0000 (UTC)) 
+[{"ProductSettingId":36,"ProductType":1,"AmountAs":0,"TrackedAs":0,"Status":1,"Resell":0,"InitialCreate":1494583148526,"LastUpdated":1494583815231}]
+
+
+

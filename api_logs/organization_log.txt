@@ -1,0 +1,1104 @@
+Request Object (Time:  Tue Sep 13 2016 10:12:35 GMT+0530 (India Standard Time)):  
+ {"OriginalUrl":"/v2/lead?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFbXBsb3llZUlkIjoyLCJBY2NvdW50SWQiOjEsImlhdCI6MTQ3MjgxNzkwMCwiZXhwIjoxNTA0MzUzOTAwfQ.EB30P-UYp3ZTaeEbhV_-QqK-cCOdGT6TF9g73bPXQTI&emp_id=5","Method":{"post":true},"Params":{},"Query":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFbXBsb3llZUlkIjoyLCJBY2NvdW50SWQiOjEsImlhdCI6MTQ3MjgxNzkwMCwiZXhwIjoxNTA0MzUzOTAwfQ.EB30P-UYp3ZTaeEbhV_-QqK-cCOdGT6TF9g73bPXQTI","emp_id":"5"},"Body":{"LeadId":16,"Name":"lead Meeting Lead","Amount":null,"Iswon":null,"Expectedclouserdate":null,"Expectedclouserdatetime":null,"Isfresh":null,"Commissionrate":null,"Lostreason":null,"Prospectsdate":null,"Contacteddate":null,"Proposalgivendate":null,"ProposalFinalizedDate":null,"Innegotiationdate":null,"Wondate":null,"Lostdate":null,"Currentstate":null,"Contact":{"Name":"am new an Testing","Number":"+91 95 82 71","Email":"aman@bytesultra.com","Address":"","IsLink":false,"EmployeeId":2,"IsReassigned":1,"IsActive":true,"InitialCreate":1457681246866},"AmcId":null,"LeadSourceId":null,"LeadSourceSubString":null,"EmployeeId":2,"ProductId":null,"Organization":{"Name":"Asia-Pacific Network Information Centre Testing ","ShortName":"APNIC","Type":1,"PhoneNumber":"12345678901","Address":null,"EmployeeId":2,"IsActive":true,"InitialCreate":null,"LastUpdated":null,"name":"Asia-Pacific Network Information Centre Testing ","account_id":1,"short_name":"APNIC","type":1,"phone_number":"12345678901","address":null,"employee_id":2,"initial_create":1473741755216,"last_updated":1473741755216},"IsReassigned":1,"WonLostByEmployeeName":null,"WonLostByEmployeeId":null,"LeadStageCalculation":[{"AccountId":6,"Active":1,"NumberOfDays":3,"InitialCreate":1461932537763,"LastUpdated":1467875980450,"StageName":"suspects","Status":null,"StartDate":null,"EndDate":null,"InitialPositionLevel":null,"UpdatedPositionLevel":null,"StageSettingId":null,"LeadId":16,"EmployeeId":null},{"AccountId":6,"Active":0,"NumberOfDays":12,"InitialCreate":1461932537763,"LastUpdated":1467177244621,"StageName":"test","Status":null,"StartDate":null,"EndDate":null,"InitialPositionLevel":null,"UpdatedPositionLevel":null,"StageSettingId":null,"LeadId":16,"EmployeeId":null}],"Notes":[{"Text":"Reminder","IsRemoteSuccess":2,"Addedon":null,"ContactId":3,"EmployeeId":2,"MeetingId":1,"AgentId":1,"LeadId":16,"IsActive":false,"InitialCreate":0,"LastUpdated":1462436078629},{"Text":"Reminder 2","IsRemoteSuccess":1,"Addedon":null,"ContactId":37,"EmployeeId":2,"MeetingId":1,"AgentId":1,"LeadId":16,"IsActive":false,"InitialCreate":0,"LastUpdated":1462436078629}]}}
+
+ Response Object (Time: Tue Sep 13 2016 10:12:35 GMT+0530 (India Standard Time)) 
+{"organization_id":1885,"name":"Asia-Pacific Network Information Centre Testing ","account_id":1,"short_name":"APNIC","type":1,"phone_number":"12345678901","address":null,"employee_id":2,"initial_create":1473741755216,"last_updated":1473741755216}
+
+
+
+Request Object (Time:  Tue Sep 13 2016 10:19:44 GMT+0530 (India Standard Time)):  
+ {"OriginalUrl":"/v2/lead?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFbXBsb3llZUlkIjoyLCJBY2NvdW50SWQiOjEsImlhdCI6MTQ3MjgxNzkwMCwiZXhwIjoxNTA0MzUzOTAwfQ.EB30P-UYp3ZTaeEbhV_-QqK-cCOdGT6TF9g73bPXQTI&emp_id=5","Method":{"post":true},"Params":{},"Query":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFbXBsb3llZUlkIjoyLCJBY2NvdW50SWQiOjEsImlhdCI6MTQ3MjgxNzkwMCwiZXhwIjoxNTA0MzUzOTAwfQ.EB30P-UYp3ZTaeEbhV_-QqK-cCOdGT6TF9g73bPXQTI","emp_id":"5"},"Body":{"LeadId":16,"Name":"lead Meeting Lead","Amount":null,"Iswon":null,"Expectedclouserdate":null,"Expectedclouserdatetime":null,"Isfresh":null,"Commissionrate":null,"Lostreason":null,"Prospectsdate":null,"Contacteddate":null,"Proposalgivendate":null,"ProposalFinalizedDate":null,"Innegotiationdate":null,"Wondate":null,"Lostdate":null,"Currentstate":null,"Contact":{"Name":"am new an Testing","Number":"+91 95 82 71","Email":"aman@bytesultra.com","Address":"","IsLink":false,"EmployeeId":2,"IsReassigned":1,"IsActive":true,"InitialCreate":1457681246866,"name":"am new an Testing","account_id":1,"number":"+91 95 82 71","email":"aman@bytesultra.com","address":"","isLink":false,"employee_id":2,"organization_id":1886,"initial_create":1473742184384,"last_updated":1473742184384},"AmcId":null,"LeadSourceId":null,"LeadSourceSubString":null,"EmployeeId":2,"ProductId":null,"Organization":{"Name":"Asia-Pacific Network Information Centre Testing ","ShortName":"APNIC","Type":1,"PhoneNumber":"12345678901","Address":null,"EmployeeId":2,"IsActive":true,"InitialCreate":null,"LastUpdated":null,"name":"Asia-Pacific Network Information Centre Testing ","account_id":1,"short_name":"APNIC","type":1,"phone_number":"12345678901","address":null,"employee_id":2,"initial_create":1473742184384,"last_updated":1473742184384},"IsReassigned":1,"WonLostByEmployeeName":null,"WonLostByEmployeeId":null,"LeadStageCalculation":[{"AccountId":6,"Active":1,"NumberOfDays":3,"InitialCreate":1461932537763,"LastUpdated":1467875980450,"StageName":"suspects","Status":null,"StartDate":null,"EndDate":null,"InitialPositionLevel":null,"UpdatedPositionLevel":null,"StageSettingId":null,"LeadId":16,"EmployeeId":null},{"AccountId":6,"Active":0,"NumberOfDays":12,"InitialCreate":1461932537763,"LastUpdated":1467177244621,"StageName":"test","Status":null,"StartDate":null,"EndDate":null,"InitialPositionLevel":null,"UpdatedPositionLevel":null,"StageSettingId":null,"LeadId":16,"EmployeeId":null}],"Notes":[{"Text":"Reminder","IsRemoteSuccess":2,"Addedon":null,"ContactId":3,"EmployeeId":2,"MeetingId":1,"AgentId":1,"LeadId":16,"IsActive":false,"InitialCreate":0,"LastUpdated":1462436078629},{"Text":"Reminder 2","IsRemoteSuccess":1,"Addedon":null,"ContactId":37,"EmployeeId":2,"MeetingId":1,"AgentId":1,"LeadId":16,"IsActive":false,"InitialCreate":0,"LastUpdated":1462436078629}]}}
+
+ Response Object (Time: Tue Sep 13 2016 10:19:44 GMT+0530 (India Standard Time)) 
+{"OrganizationId":1886,"Name":"Asia-Pacific Network Information Centre Testing ","ShortName":"APNIC","Type":1,"PhoneNumber":"12345678901","Address":null,"EmployeeId":2,"IsActive":true,"InitialCreate":1473742184384,"LastUpdated":1473742184384}
+
+
+
+Request Object (Time:  Tue Sep 13 2016 10:21:13 GMT+0530 (India Standard Time)):  
+ {"OriginalUrl":"/v2/lead?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFbXBsb3llZUlkIjoyLCJBY2NvdW50SWQiOjEsImlhdCI6MTQ3MjgxNzkwMCwiZXhwIjoxNTA0MzUzOTAwfQ.EB30P-UYp3ZTaeEbhV_-QqK-cCOdGT6TF9g73bPXQTI&emp_id=5","Method":{"post":true},"Params":{},"Query":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFbXBsb3llZUlkIjoyLCJBY2NvdW50SWQiOjEsImlhdCI6MTQ3MjgxNzkwMCwiZXhwIjoxNTA0MzUzOTAwfQ.EB30P-UYp3ZTaeEbhV_-QqK-cCOdGT6TF9g73bPXQTI","emp_id":"5"},"Body":{"LeadId":16,"Name":"lead Meeting Lead","Amount":null,"Iswon":null,"Expectedclouserdate":null,"Expectedclouserdatetime":null,"Isfresh":null,"Commissionrate":null,"Lostreason":null,"Prospectsdate":null,"Contacteddate":null,"Proposalgivendate":null,"ProposalFinalizedDate":null,"Innegotiationdate":null,"Wondate":null,"Lostdate":null,"Currentstate":null,"Contact":{"Name":"am new an Testing","Number":"+91 95 82 71","Email":"aman@bytesultra.com","Address":"","IsLink":false,"EmployeeId":2,"IsReassigned":1,"IsActive":true,"InitialCreate":1457681246866,"name":"am new an Testing","account_id":1,"number":"+91 95 82 71","email":"aman@bytesultra.com","address":"","isLink":false,"employee_id":2,"organization_id":1887,"initial_create":1473742273172,"last_updated":1473742273172},"AmcId":null,"LeadSourceId":null,"LeadSourceSubString":null,"EmployeeId":2,"ProductId":null,"Organization":{"Name":"Asia-Pacific Network Information Centre Testing ","ShortName":"APNIC","Type":1,"PhoneNumber":"12345678901","Address":null,"EmployeeId":2,"IsActive":true,"InitialCreate":null,"LastUpdated":null,"name":"Asia-Pacific Network Information Centre Testing ","account_id":1,"short_name":"APNIC","type":1,"phone_number":"12345678901","address":null,"employee_id":2,"initial_create":1473742273172,"last_updated":1473742273172},"IsReassigned":1,"WonLostByEmployeeName":null,"WonLostByEmployeeId":null,"LeadStageCalculation":[{"AccountId":6,"Active":1,"NumberOfDays":3,"InitialCreate":1461932537763,"LastUpdated":1467875980450,"StageName":"suspects","Status":null,"StartDate":null,"EndDate":null,"InitialPositionLevel":null,"UpdatedPositionLevel":null,"StageSettingId":null,"LeadId":16,"EmployeeId":null},{"AccountId":6,"Active":0,"NumberOfDays":12,"InitialCreate":1461932537763,"LastUpdated":1467177244621,"StageName":"test","Status":null,"StartDate":null,"EndDate":null,"InitialPositionLevel":null,"UpdatedPositionLevel":null,"StageSettingId":null,"LeadId":16,"EmployeeId":null}],"Notes":[{"Text":"Reminder","IsRemoteSuccess":2,"Addedon":null,"ContactId":3,"EmployeeId":2,"MeetingId":1,"AgentId":1,"LeadId":16,"IsActive":false,"InitialCreate":0,"LastUpdated":1462436078629},{"Text":"Reminder 2","IsRemoteSuccess":1,"Addedon":null,"ContactId":37,"EmployeeId":2,"MeetingId":1,"AgentId":1,"LeadId":16,"IsActive":false,"InitialCreate":0,"LastUpdated":1462436078629}]}}
+
+ Response Object (Time: Tue Sep 13 2016 10:21:13 GMT+0530 (India Standard Time)) 
+{"OrganizationId":1887,"Name":"Asia-Pacific Network Information Centre Testing ","ShortName":"APNIC","Type":1,"PhoneNumber":"12345678901","Address":null,"EmployeeId":2,"IsActive":true,"InitialCreate":1473742273172,"LastUpdated":1473742273172}
+
+
+
+Request Object (Time:  Tue Sep 13 2016 11:52:38 GMT+0530 (India Standard Time)):  
+ {"OriginalUrl":"/v2/lead?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFbXBsb3llZUlkIjoyLCJBY2NvdW50SWQiOjEsImlhdCI6MTQ3MjgxNzkwMCwiZXhwIjoxNTA0MzUzOTAwfQ.EB30P-UYp3ZTaeEbhV_-QqK-cCOdGT6TF9g73bPXQTI&emp_id=5","Method":{"post":true},"Params":{},"Query":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFbXBsb3llZUlkIjoyLCJBY2NvdW50SWQiOjEsImlhdCI6MTQ3MjgxNzkwMCwiZXhwIjoxNTA0MzUzOTAwfQ.EB30P-UYp3ZTaeEbhV_-QqK-cCOdGT6TF9g73bPXQTI","emp_id":"5"},"Body":{"LeadId":16,"Name":"lead Meeting Lead","Amount":null,"Iswon":null,"Expectedclouserdate":null,"Expectedclouserdatetime":null,"Isfresh":null,"Commissionrate":null,"Lostreason":null,"Prospectsdate":null,"Contacteddate":null,"Proposalgivendate":null,"ProposalFinalizedDate":null,"Innegotiationdate":null,"Wondate":null,"Lostdate":null,"Currentstate":null,"Contact":{"Name":"am new an Testing","Number":"+91 95 82 71","Email":"aman@bytesultra.com","Address":"","IsLink":false,"EmployeeId":2,"IsReassigned":1,"IsActive":true,"InitialCreate":1457681246866,"name":"am new an Testing","account_id":1,"number":"+91 95 82 71","email":"aman@bytesultra.com","address":"","isLink":false,"employee_id":2,"organization_id":1888,"initial_create":1473747758701,"last_updated":1473747758701},"AmcId":null,"LeadSourceId":null,"LeadSourceSubString":null,"EmployeeId":2,"ProductId":null,"Organization":{"Name":"Asia-Pacific Network Information Centre Testing ","ShortName":"APNIC","Type":1,"PhoneNumber":"12345678901","Address":null,"EmployeeId":2,"IsActive":true,"InitialCreate":null,"LastUpdated":null,"name":"Asia-Pacific Network Information Centre Testing ","account_id":1,"short_name":"APNIC","type":1,"phone_number":"12345678901","address":null,"employee_id":2,"initial_create":1473747758701,"last_updated":1473747758701},"IsReassigned":1,"WonLostByEmployeeName":null,"WonLostByEmployeeId":null,"LeadStageCalculation":[{"AccountId":6,"Active":1,"NumberOfDays":3,"InitialCreate":1461932537763,"LastUpdated":1467875980450,"StageName":"suspects","Status":null,"StartDate":null,"EndDate":null,"InitialPositionLevel":null,"UpdatedPositionLevel":null,"StageSettingId":null,"LeadId":16,"EmployeeId":null},{"AccountId":6,"Active":0,"NumberOfDays":12,"InitialCreate":1461932537763,"LastUpdated":1467177244621,"StageName":"test","Status":null,"StartDate":null,"EndDate":null,"InitialPositionLevel":null,"UpdatedPositionLevel":null,"StageSettingId":null,"LeadId":16,"EmployeeId":null}],"Notes":[{"Text":"Reminder","IsRemoteSuccess":2,"Addedon":null,"ContactId":3,"EmployeeId":2,"MeetingId":1,"AgentId":1,"LeadId":16,"IsActive":false,"InitialCreate":0,"LastUpdated":1462436078629},{"Text":"Reminder 2","IsRemoteSuccess":1,"Addedon":null,"ContactId":37,"EmployeeId":2,"MeetingId":1,"AgentId":1,"LeadId":16,"IsActive":false,"InitialCreate":0,"LastUpdated":1462436078629}]}}
+
+ Response Object (Time: Tue Sep 13 2016 11:52:38 GMT+0530 (India Standard Time)) 
+{"OrganizationId":1888,"Name":"Asia-Pacific Network Information Centre Testing ","ShortName":"APNIC","Type":1,"PhoneNumber":"12345678901","Address":null,"EmployeeId":2,"IsActive":true,"InitialCreate":1473747758701,"LastUpdated":1473747758701}
+
+
+
+Request Object (Time:  Tue Sep 13 2016 16:16:59 GMT+0530 (India Standard Time)):  
+ {"OriginalUrl":"/v2/lead?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFbXBsb3llZUlkIjoyLCJBY2NvdW50SWQiOjEsImlhdCI6MTQ3MjgxNzkwMCwiZXhwIjoxNTA0MzUzOTAwfQ.EB30P-UYp3ZTaeEbhV_-QqK-cCOdGT6TF9g73bPXQTI&emp_id=5","Method":{"post":true},"Params":{},"Query":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFbXBsb3llZUlkIjoyLCJBY2NvdW50SWQiOjEsImlhdCI6MTQ3MjgxNzkwMCwiZXhwIjoxNTA0MzUzOTAwfQ.EB30P-UYp3ZTaeEbhV_-QqK-cCOdGT6TF9g73bPXQTI","emp_id":"5"},"Body":{"LeadId":16,"Name":"lead Meeting Lead","Amount":null,"Iswon":null,"Expectedclouserdate":null,"Expectedclouserdatetime":null,"Isfresh":null,"Commissionrate":null,"Lostreason":null,"Prospectsdate":null,"Contacteddate":null,"Proposalgivendate":null,"ProposalFinalizedDate":null,"Innegotiationdate":null,"Wondate":null,"Lostdate":null,"Currentstate":null,"Contact":{"Name":"am new an Testing","Number":"+91 95 82 71","Email":"aman@bytesultra.com","Address":"","IsLink":false,"EmployeeId":2,"IsReassigned":1,"IsActive":true,"InitialCreate":1457681246866,"name":"am new an Testing","account_id":1,"number":"+91 95 82 71","email":"aman@bytesultra.com","address":"","isLink":false,"employee_id":2,"organization_id":2020,"initial_create":1473763619485,"last_updated":1473763619485},"AmcId":null,"LeadSourceId":null,"LeadSourceSubString":null,"EmployeeId":2,"ProductId":null,"Organization":{"Name":"Asia-Pacific Network Information Centre Testing ","ShortName":"APNIC","Type":1,"PhoneNumber":"12345678901","Address":null,"EmployeeId":2,"IsActive":true,"InitialCreate":null,"LastUpdated":null,"name":"Asia-Pacific Network Information Centre Testing ","account_id":1,"short_name":"APNIC","type":1,"phone_number":"12345678901","address":null,"employee_id":2,"initial_create":1473763619485,"last_updated":1473763619485},"IsReassigned":1,"WonLostByEmployeeName":null,"WonLostByEmployeeId":null,"LeadStageCalculation":[{"AccountId":6,"Active":1,"NumberOfDays":3,"InitialCreate":1461932537763,"LastUpdated":1467875980450,"StageName":"suspects","Status":null,"StartDate":null,"EndDate":null,"InitialPositionLevel":null,"UpdatedPositionLevel":null,"StageSettingId":null,"LeadId":16,"EmployeeId":null},{"AccountId":6,"Active":0,"NumberOfDays":12,"InitialCreate":1461932537763,"LastUpdated":1467177244621,"StageName":"test","Status":null,"StartDate":null,"EndDate":null,"InitialPositionLevel":null,"UpdatedPositionLevel":null,"StageSettingId":null,"LeadId":16,"EmployeeId":null}],"Notes":[{"Text":"Reminder","IsRemoteSuccess":2,"Addedon":null,"ContactId":37,"EmployeeId":2,"MeetingId":1,"AgentId":1,"LeadId":16,"IsActive":false,"InitialCreate":0,"LastUpdated":1462436078629},{"Text":"Reminder 2","IsRemoteSuccess":1,"Addedon":null,"ContactId":37,"EmployeeId":2,"MeetingId":1,"AgentId":1,"LeadId":16,"IsActive":false,"InitialCreate":0,"LastUpdated":1462436078629}]}}
+
+ Response Object (Time: Tue Sep 13 2016 16:16:59 GMT+0530 (India Standard Time)) 
+{"OrganizationId":2020,"Name":"Asia-Pacific Network Information Centre Testing ","ShortName":"APNIC","Type":1,"PhoneNumber":"12345678901","Address":null,"EmployeeId":2,"IsActive":true,"InitialCreate":1473763619485,"LastUpdated":1473763619485}
+
+
+
+Request Object (Time:  Tue Sep 13 2016 16:20:21 GMT+0530 (India Standard Time)):  
+ {"OriginalUrl":"/v2/lead?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFbXBsb3llZUlkIjoyLCJBY2NvdW50SWQiOjEsImlhdCI6MTQ3MjgxNzkwMCwiZXhwIjoxNTA0MzUzOTAwfQ.EB30P-UYp3ZTaeEbhV_-QqK-cCOdGT6TF9g73bPXQTI&emp_id=5","Method":{"post":true},"Params":{},"Query":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFbXBsb3llZUlkIjoyLCJBY2NvdW50SWQiOjEsImlhdCI6MTQ3MjgxNzkwMCwiZXhwIjoxNTA0MzUzOTAwfQ.EB30P-UYp3ZTaeEbhV_-QqK-cCOdGT6TF9g73bPXQTI","emp_id":"5"},"Body":{"LeadId":16,"Name":"lead Meeting Lead","Amount":null,"Iswon":null,"Expectedclouserdate":null,"Expectedclouserdatetime":null,"Isfresh":null,"Commissionrate":null,"Lostreason":null,"Prospectsdate":null,"Contacteddate":null,"Proposalgivendate":null,"ProposalFinalizedDate":null,"Innegotiationdate":null,"Wondate":null,"Lostdate":null,"Currentstate":null,"Contact":{"Name":"am new an Testing","Number":"+91 95 82 71","Email":"aman@bytesultra.com","Address":"","IsLink":false,"EmployeeId":2,"IsReassigned":1,"IsActive":true,"InitialCreate":1457681246866,"name":"am new an Testing","account_id":1,"number":"+91 95 82 71","email":"aman@bytesultra.com","address":"","isLink":false,"employee_id":2,"organization_id":2021,"initial_create":1473763820987,"last_updated":1473763820987},"AmcId":null,"LeadSourceId":null,"LeadSourceSubString":null,"EmployeeId":2,"ProductId":null,"Organization":{"Name":"Asia-Pacific Network Information Centre Testing ","ShortName":"APNIC","Type":1,"PhoneNumber":"12345678901","Address":null,"EmployeeId":2,"IsActive":true,"InitialCreate":null,"LastUpdated":null,"name":"Asia-Pacific Network Information Centre Testing ","account_id":1,"short_name":"APNIC","type":1,"phone_number":"12345678901","address":null,"employee_id":2,"initial_create":1473763820987,"last_updated":1473763820987},"IsReassigned":1,"WonLostByEmployeeName":null,"WonLostByEmployeeId":null,"LeadStageCalculation":[{"AccountId":6,"Active":1,"NumberOfDays":3,"InitialCreate":1461932537763,"LastUpdated":1467875980450,"StageName":"suspects","Status":null,"StartDate":null,"EndDate":null,"InitialPositionLevel":null,"UpdatedPositionLevel":null,"StageSettingId":null,"LeadId":16,"EmployeeId":null},{"AccountId":6,"Active":0,"NumberOfDays":12,"InitialCreate":1461932537763,"LastUpdated":1467177244621,"StageName":"test","Status":null,"StartDate":null,"EndDate":null,"InitialPositionLevel":null,"UpdatedPositionLevel":null,"StageSettingId":null,"LeadId":16,"EmployeeId":null}],"Notes":[{"Text":"Reminder","IsRemoteSuccess":2,"Addedon":null,"ContactId":37,"EmployeeId":2,"MeetingId":1,"AgentId":1,"LeadId":16,"IsActive":false,"InitialCreate":0,"LastUpdated":1462436078629},{"Text":"Reminder 2","IsRemoteSuccess":1,"Addedon":null,"ContactId":37,"EmployeeId":2,"MeetingId":1,"AgentId":1,"LeadId":16,"IsActive":false,"InitialCreate":0,"LastUpdated":1462436078629}]}}
+
+ Response Object (Time: Tue Sep 13 2016 16:20:21 GMT+0530 (India Standard Time)) 
+{"OrganizationId":2021,"Name":"Asia-Pacific Network Information Centre Testing ","ShortName":"APNIC","Type":1,"PhoneNumber":"12345678901","Address":null,"EmployeeId":2,"IsActive":true,"InitialCreate":1473763820987,"LastUpdated":1473763820987}
+
+
+
+Request Object (Time:  Tue Sep 13 2016 16:20:45 GMT+0530 (India Standard Time)):  
+ {"OriginalUrl":"/v2/lead?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFbXBsb3llZUlkIjoyLCJBY2NvdW50SWQiOjEsImlhdCI6MTQ3MjgxNzkwMCwiZXhwIjoxNTA0MzUzOTAwfQ.EB30P-UYp3ZTaeEbhV_-QqK-cCOdGT6TF9g73bPXQTI&emp_id=5","Method":{"post":true},"Params":{},"Query":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFbXBsb3llZUlkIjoyLCJBY2NvdW50SWQiOjEsImlhdCI6MTQ3MjgxNzkwMCwiZXhwIjoxNTA0MzUzOTAwfQ.EB30P-UYp3ZTaeEbhV_-QqK-cCOdGT6TF9g73bPXQTI","emp_id":"5"},"Body":{"LeadId":16,"Name":"lead Meeting Lead","Amount":null,"Iswon":null,"Expectedclouserdate":null,"Expectedclouserdatetime":null,"Isfresh":null,"Commissionrate":null,"Lostreason":null,"Prospectsdate":null,"Contacteddate":null,"Proposalgivendate":null,"ProposalFinalizedDate":null,"Innegotiationdate":null,"Wondate":null,"Lostdate":null,"Currentstate":null,"Contact":{"Name":"am new an Testing","Number":"+91 95 82 71","Email":"aman@bytesultra.com","Address":"","IsLink":false,"EmployeeId":2,"IsReassigned":1,"IsActive":true,"InitialCreate":1457681246866,"name":"am new an Testing","account_id":1,"number":"+91 95 82 71","email":"aman@bytesultra.com","address":"","isLink":false,"employee_id":2,"organization_id":2022,"initial_create":1473763845394,"last_updated":1473763845394},"AmcId":null,"LeadSourceId":null,"LeadSourceSubString":null,"EmployeeId":2,"ProductId":null,"Organization":{"Name":"Asia-Pacific Network Information Centre Testing ","ShortName":"APNIC","Type":1,"PhoneNumber":"12345678901","Address":null,"EmployeeId":2,"IsActive":true,"InitialCreate":null,"LastUpdated":null,"name":"Asia-Pacific Network Information Centre Testing ","account_id":1,"short_name":"APNIC","type":1,"phone_number":"12345678901","address":null,"employee_id":2,"initial_create":1473763845394,"last_updated":1473763845394},"IsReassigned":1,"WonLostByEmployeeName":null,"WonLostByEmployeeId":null,"LeadStageCalculation":[{"AccountId":6,"Active":1,"NumberOfDays":3,"InitialCreate":1461932537763,"LastUpdated":1467875980450,"StageName":"suspects","Status":null,"StartDate":null,"EndDate":null,"InitialPositionLevel":null,"UpdatedPositionLevel":null,"StageSettingId":null,"LeadId":16,"EmployeeId":null},{"AccountId":6,"Active":0,"NumberOfDays":12,"InitialCreate":1461932537763,"LastUpdated":1467177244621,"StageName":"test","Status":null,"StartDate":null,"EndDate":null,"InitialPositionLevel":null,"UpdatedPositionLevel":null,"StageSettingId":null,"LeadId":16,"EmployeeId":null}],"Notes":[{"Text":"Reminder","IsRemoteSuccess":2,"Addedon":null,"ContactId":37,"EmployeeId":2,"MeetingId":1,"AgentId":1,"LeadId":16,"IsActive":false,"InitialCreate":0,"LastUpdated":1462436078629},{"Text":"Reminder 2","IsRemoteSuccess":1,"Addedon":null,"ContactId":37,"EmployeeId":2,"MeetingId":1,"AgentId":1,"LeadId":16,"IsActive":false,"InitialCreate":0,"LastUpdated":1462436078629}]}}
+
+ Response Object (Time: Tue Sep 13 2016 16:20:45 GMT+0530 (India Standard Time)) 
+{"OrganizationId":2022,"Name":"Asia-Pacific Network Information Centre Testing ","ShortName":"APNIC","Type":1,"PhoneNumber":"12345678901","Address":null,"EmployeeId":2,"IsActive":true,"InitialCreate":1473763845394,"LastUpdated":1473763845394}
+
+
+
+Request Object (Time:  Tue Sep 13 2016 16:21:20 GMT+0530 (India Standard Time)):  
+ {"OriginalUrl":"/v2/lead?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFbXBsb3llZUlkIjoyLCJBY2NvdW50SWQiOjEsImlhdCI6MTQ3MjgxNzkwMCwiZXhwIjoxNTA0MzUzOTAwfQ.EB30P-UYp3ZTaeEbhV_-QqK-cCOdGT6TF9g73bPXQTI&emp_id=5","Method":{"post":true},"Params":{},"Query":{"token":"eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJFbXBsb3llZUlkIjoyLCJBY2NvdW50SWQiOjEsImlhdCI6MTQ3MjgxNzkwMCwiZXhwIjoxNTA0MzUzOTAwfQ.EB30P-UYp3ZTaeEbhV_-QqK-cCOdGT6TF9g73bPXQTI","emp_id":"5"},"Body":{"LeadId":16,"Name":"lead Meeting Lead","Amount":null,"Iswon":null,"Expectedclouserdate":null,"Expectedclouserdatetime":null,"Isfresh":null,"Commissionrate":null,"Lostreason":null,"Prospectsdate":null,"Contacteddate":null,"Proposalgivendate":null,"ProposalFinalizedDate":null,"Innegotiationdate":null,"Wondate":null,"Lostdate":null,"Currentstate":null,"Contact":{"Name":"am new an Testing","Number":"+91 95 82 71","Email":"aman@bytesultra.com","Address":"","IsLink":false,"EmployeeId":2,"IsReassigned":1,"IsActive":true,"InitialCreate":1457681246866,"name":"am new an Testing","account_id":1,"number":"+91 95 82 71","email":"aman@bytesultra.com","address":"","isLink":false,"employee_id":2,"organization_id":2023,"initial_create":1473763880584,"last_updated":1473763880584},"AmcId":null,"LeadSourceId":null,"LeadSourceSubString":null,"EmployeeId":2,"ProductId":null,"Organization":{"Name":"Asia-Pacific Network Information Centre Testing ","ShortName":"APNIC","Type":1,"PhoneNumber":"12345678901","Address":null,"EmployeeId":2,"IsActive":true,"InitialCreate":null,"LastUpdated":null,"name":"Asia-Pacific Network Information Centre Testing ","account_id":1,"short_name":"APNIC","type":1,"phone_number":"12345678901","address":null,"employee_id":2,"initial_create":1473763880584,"last_updated":1473763880584},"IsReassigned":1,"WonLostByEmployeeName":null,"WonLostByEmployeeId":null,"LeadStageCalculation":[{"AccountId":6,"Active":1,"NumberOfDays":3,"InitialCreate":1461932537763,"LastUpdated":1467875980450,"StageName":"suspects","Status":null,"StartDate":null,"EndDate":null,"InitialPositionLevel":null,"UpdatedPositionLevel":null,"StageSettingId":null,"LeadId":16,"EmployeeId":null},{"AccountId":6,"Active":0,"NumberOfDays":12,"InitialCreate":1461932537763,"LastUpdated":1467177244621,"StageName":"test","Status":null,"StartDate":null,"EndDate":null,"InitialPositionLevel":null,"UpdatedPositionLevel":null,"StageSettingId":null,"LeadId":16,"EmployeeId":null}],"Notes":[{"Text":"Reminder","IsRemoteSuccess":2,"Addedon":null,"ContactId":37,"EmployeeId":2,"MeetingId":1,"AgentId":1,"LeadId":16,"IsActive":false,"InitialCreate":0,"LastUpdated":1462436078629},{"Text":"Reminder 2","IsRemoteSuccess":1,"Addedon":null,"ContactId":37,"EmployeeId":2,"MeetingId":1,"AgentId":1,"LeadId":16,"IsActive":false,"InitialCreate":0,"LastUpdated":1462436078629}]}}
+
+ Response Object (Time: Tue Sep 13 2016 16:21:20 GMT+0530 (India Standard Time)) 
+{"OrganizationId":2023,"Name":"Asia-Pacific Network Information Centre Testing ","ShortName":"APNIC","Type":1,"PhoneNumber":"12345678901","Address":null,"EmployeeId":2,"IsActive":true,"InitialCreate":1473763880584,"LastUpdated":1473763880584}
+
+
+
+Request Object (Time:  Fri Apr 21 2017 12:59:34 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=201&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Fri Apr 21 2017 12:59:34 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":245,"Name":"GSC&Co.","ShortName":null,"Type":null,"PhoneNumber":"9876564561","Address":null,"EmployeeId":201,"IsActive":true,"InitialCreate":1490168574190,"LastUpdated":1490168575053}],"recordCount":1,"ServerCurrentTime":1492779574451,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Fri Apr 21 2017 13:00:25 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=201&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Fri Apr 21 2017 13:00:25 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":245,"Name":"GSC&Co.","ShortName":null,"Type":null,"PhoneNumber":"9876564561","Address":null,"EmployeeId":201,"IsActive":true,"InitialCreate":1490168574190,"LastUpdated":1490168575053}],"recordCount":1,"ServerCurrentTime":1492779625969,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat Apr 22 2017 06:31:56 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=201&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat Apr 22 2017 06:31:56 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":245,"Name":"GSC&Co.","ShortName":null,"Type":null,"PhoneNumber":"9876564561","Address":null,"EmployeeId":201,"IsActive":true,"InitialCreate":1490168574190,"LastUpdated":1490168575053}],"recordCount":1,"ServerCurrentTime":1492842716290,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 04 2017 08:54:13 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=201&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 04 2017 08:54:13 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":245,"Name":"GSC&Co.","ShortName":null,"Type":null,"PhoneNumber":"9876564561","Address":null,"EmployeeId":201,"IsActive":true,"InitialCreate":1490168574190,"LastUpdated":1490168575053}],"recordCount":1,"ServerCurrentTime":1493888053053,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 04 2017 09:51:43 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=201&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 04 2017 09:51:43 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":245,"Name":"GSC&Co.","ShortName":null,"Type":null,"PhoneNumber":"9876564561","Address":null,"EmployeeId":201,"IsActive":true,"InitialCreate":1490168574190,"LastUpdated":1490168575053}],"recordCount":1,"ServerCurrentTime":1493891503611,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 05:52:01 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=201&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 05:52:01 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":245,"Name":"GSC&Co.","ShortName":null,"Type":null,"PhoneNumber":"9876564561","Address":null,"EmployeeId":201,"IsActive":true,"InitialCreate":1490168574190,"LastUpdated":1490168575053}],"recordCount":1,"ServerCurrentTime":1494654721168,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 05:52:21 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=201&timestamp=1490168575053","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"1490168575053"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 05:52:21 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494654741079,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 05:52:21 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=209&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"209","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 05:52:21 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494654741254,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 05:52:21 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=210&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"210","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 05:52:21 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494654741572,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 05:52:21 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=211&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"211","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 05:52:21 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494654741750,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 05:52:21 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=212&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"212","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 05:52:21 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494654741902,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:13:17 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=209&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"209","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:13:17 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494659597963,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:13:18 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=210&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"210","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:13:18 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494659598117,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:13:18 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=211&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"211","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:13:18 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494659598269,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:13:18 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=212&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"212","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:13:18 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494659598520,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:13:33 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=201&timestamp=1490168575053","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"1490168575053"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:13:33 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494659613559,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:13:33 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=209&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"209","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:13:33 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494659613869,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:13:34 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=210&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"210","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:13:34 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494659614028,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:13:34 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=211&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"211","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:13:34 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494659614189,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:13:34 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=212&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"212","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:13:34 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494659614509,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:37:57 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=201&timestamp=1490168575053","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"1490168575053"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:37:57 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494661077036,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:37:57 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=209&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"209","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:37:57 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494661077318,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:37:57 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=210&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"210","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:37:57 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494661077488,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:37:57 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=211&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"211","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:37:57 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494661077980,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:37:58 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=212&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"212","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:37:58 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494661078155,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:38:13 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=201&timestamp=1490168575053","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"1490168575053"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:38:13 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494661093530,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:38:14 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=209&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"209","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:38:14 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494661094232,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:38:14 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=210&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"210","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:38:14 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494661094407,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:38:14 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=211&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"211","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:38:14 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494661094569,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:38:14 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=212&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"212","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:38:14 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494661094940,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 08:10:07 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 08:10:07 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":269,"Name":"Google","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494678268000,"LastUpdated":1494679782867},{"OrganizationId":270,"Name":"Bharti Airtel","ShortName":null,"Type":0,"PhoneNumber":"9874758965","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494681424139,"LastUpdated":1494681530163}],"recordCount":2,"ServerCurrentTime":1495008607361,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 08:10:31 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=1494681530163","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"1494681530163"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 08:10:31 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495008631188,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 08:10:31 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 08:10:31 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495008631348,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 08:15:27 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization/270","Method":{"put":true},"Params":{"id":"270"},"Query":{},"Body":{"AccountType":null,"AddDate1":0,"AddDate2":0,"AddNum1":0,"AddNum2":0,"AddPicklist1":null,"AddPicklist2":null,"AddPicklist3":null,"AddText1":null,"AddText2":null,"Address":null,"EmployeeId":228,"EmployeeNumber":null,"Industry":null,"InitialCreate":1494681424139,"IsActive":true,"IsRemoteSuccess":0,"LastUpdated":1494681530163,"LocalId":-2147483646,"Name":"Bharti Airtel","OrganizationId":270,"Ownership":null,"PhoneNumber":"9874758965","RemoteExtra":null,"RemoteMessage":null,"Revenue":null,"ShortName":null,"Type":0,"assignSuccess":false,"isMine":false}}
+
+ Response Object (Time: Wed May 17 2017 08:15:27 GMT+0000 (UTC)) 
+{"OrganizationId":270,"Name":"Bharti Airtel","ShortName":null,"Type":0,"PhoneNumber":"9874758965","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494681424139,"LastUpdated":1495008927423}
+
+
+
+Request Object (Time:  Wed May 17 2017 08:15:27 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization/268","Method":{"put":true},"Params":{"id":"268"},"Query":{},"Body":{"AccountType":null,"AddDate1":0,"AddDate2":0,"AddNum1":0,"AddNum2":0,"AddPicklist1":null,"AddPicklist2":null,"AddPicklist3":null,"AddText1":null,"AddText2":null,"Address":null,"EmployeeId":227,"EmployeeNumber":null,"Industry":null,"InitialCreate":1494589505261,"IsActive":true,"IsRemoteSuccess":0,"LastUpdated":1494680186385,"LocalId":-2147483647,"Name":"Paypal","OrganizationId":268,"Ownership":null,"PhoneNumber":"+91965027617","RemoteExtra":null,"RemoteMessage":null,"Revenue":null,"ShortName":null,"Type":0,"assignSuccess":false,"isMine":false}}
+
+ Response Object (Time: Wed May 17 2017 08:15:27 GMT+0000 (UTC)) 
+{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495008927864}
+
+
+
+Request Object (Time:  Wed May 17 2017 08:15:42 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=1494681530163","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"1494681530163"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 08:15:42 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":270,"Name":"Bharti Airtel","ShortName":null,"Type":0,"PhoneNumber":"9874758965","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494681424139,"LastUpdated":1495008927423}],"recordCount":1,"ServerCurrentTime":1495008942478,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 08:15:42 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 08:15:42 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495008942719,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 08:16:13 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/lead","Method":{"post":true},"Params":{},"Query":{},"Body":{"AmcId":null,"Amount":66000,"Commissionrate":" - ","Contact":null,"ContactId":2190,"Contacteddate":null,"Currentstate":1,"EmployeeId":228,"Expectedclouserdate":1509388200000,"Expectedclouserdatetime":null,"InitialCreate":1495008957475,"Innegotiationdate":null,"IsActive":true,"IsIndividual":1,"IsReassigned":0,"Isfresh":0,"Iswon":0,"LastUpdated":null,"LeadId":null,"LeadProdInfo":[{"AccountId":42,"Active":1,"Amount":66000,"CloseDate":null,"CommissionRate":null,"EmployeeId":228,"Id":0,"InitialCreate":0,"LastUpdated":0,"LeadId":-2147483641,"LocalId":-2147483641,"ProductCode":90,"ProductName":"Product1","Stage":"Prospects","SubProductId":0,"SubProductName":null,"Unit":0}],"LeadSourceId":8,"LeadSourceSubString":"Abhishek Dwivedi","LeadStageCalculation":[{"Active":1,"EndDate":null,"Extra":null,"InitialCreate":0,"InitialPositionLevel":1,"LastUpdated":0,"LeadId":-2147483641,"LocalId":-2147483616,"NumberOfDays":0,"StageCalculationId":0,"StageName":"Prospects","StageSettingId":228,"StartDate":1494959400000,"UpdatedPositionLevel":1}],"LocalId":-2147483641,"Lostdate":null,"Lostreason":"","Name":"Google Product1 Deal","Notes":null,"Organization":null,"OrganizationId":269,"ProductId":null,"ProposalClickedDate":null,"ProposalFinalizedDate":null,"Proposalgivendate":null,"Prospectsdate":null,"Seen":1,"StageCalculationId":-2147483616,"WonLostByEmployeeId":0,"WonLostByEmployeeName":null,"Wondate":null,"assignSuccess":false}}
+
+ Response Object (Time: Wed May 17 2017 08:16:13 GMT+0000 (UTC)) 
+{"OrganizationId":269,"Name":"Google","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494678268000,"LastUpdated":1494679782867}
+
+
+
+Request Object (Time:  Wed May 17 2017 09:19:03 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/lead","Method":{"post":true},"Params":{},"Query":{},"Body":{"AmcId":null,"Amount":66000,"Commissionrate":" - ","Contact":null,"ContactId":2189,"Contacteddate":null,"Currentstate":1,"EmployeeId":228,"Expectedclouserdate":1496169000000,"Expectedclouserdatetime":null,"InitialCreate":1495012733923,"Innegotiationdate":null,"IsActive":true,"IsIndividual":1,"IsReassigned":0,"Isfresh":0,"Iswon":0,"LastUpdated":null,"LeadId":null,"LeadProdInfo":[{"AccountId":42,"Active":1,"Amount":66000,"CloseDate":null,"CommissionRate":null,"EmployeeId":228,"Id":0,"InitialCreate":0,"LastUpdated":0,"LeadId":-2147483640,"LocalId":-2147483640,"ProductCode":92,"ProductName":"Product3","Stage":"Prospects","SubProductId":0,"SubProductName":null,"Unit":0}],"LeadSourceId":8,"LeadSourceSubString":"Abhishek Dwivedi","LeadStageCalculation":[{"Active":1,"EndDate":null,"Extra":null,"InitialCreate":0,"InitialPositionLevel":1,"LastUpdated":0,"LeadId":-2147483640,"LocalId":-2147483615,"NumberOfDays":0,"StageCalculationId":0,"StageName":"Prospects","StageSettingId":228,"StartDate":1494959400000,"UpdatedPositionLevel":1}],"LocalId":-2147483640,"Lostdate":null,"Lostreason":"","Name":"Paypal Product3 Deal","Notes":null,"Organization":null,"OrganizationId":268,"ProductId":null,"ProposalClickedDate":null,"ProposalFinalizedDate":null,"Proposalgivendate":null,"Prospectsdate":null,"Seen":1,"StageCalculationId":-2147483615,"WonLostByEmployeeId":0,"WonLostByEmployeeName":null,"Wondate":null,"assignSuccess":false}}
+
+ Response Object (Time: Wed May 17 2017 09:19:03 GMT+0000 (UTC)) 
+{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495008927864}
+
+
+
+Request Object (Time:  Wed May 17 2017 09:20:17 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/lead","Method":{"post":true},"Params":{},"Query":{},"Body":{"AmcId":null,"Amount":66000,"Commissionrate":" - ","Contact":null,"ContactId":2189,"Contacteddate":null,"Currentstate":1,"EmployeeId":228,"Expectedclouserdate":1494959400000,"Expectedclouserdatetime":null,"InitialCreate":1495012814974,"Innegotiationdate":null,"IsActive":true,"IsIndividual":1,"IsReassigned":0,"Isfresh":0,"Iswon":0,"LastUpdated":null,"LeadId":null,"LeadProdInfo":[{"AccountId":42,"Active":1,"Amount":66000,"CloseDate":null,"CommissionRate":null,"EmployeeId":228,"Id":0,"InitialCreate":0,"LastUpdated":0,"LeadId":-2147483639,"LocalId":-2147483639,"ProductCode":91,"ProductName":"Product2","Stage":"Prospects","SubProductId":0,"SubProductName":null,"Unit":0}],"LeadSourceId":8,"LeadSourceSubString":"Abhishek Dwivedi","LeadStageCalculation":[{"Active":1,"EndDate":null,"Extra":null,"InitialCreate":0,"InitialPositionLevel":1,"LastUpdated":0,"LeadId":-2147483639,"LocalId":-2147483614,"NumberOfDays":0,"StageCalculationId":0,"StageName":"Prospects","StageSettingId":228,"StartDate":1494959400000,"UpdatedPositionLevel":1}],"LocalId":-2147483639,"Lostdate":null,"Lostreason":"","Name":"Paypal Product2 Deal","Notes":null,"Organization":null,"OrganizationId":268,"ProductId":null,"ProposalClickedDate":null,"ProposalFinalizedDate":null,"Proposalgivendate":null,"Prospectsdate":null,"Seen":1,"StageCalculationId":-2147483614,"WonLostByEmployeeId":0,"WonLostByEmployeeName":null,"Wondate":null,"assignSuccess":false}}
+
+ Response Object (Time: Wed May 17 2017 09:20:17 GMT+0000 (UTC)) 
+{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495008927864}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:29:11 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:29:11 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":267,"Name":"PM&Co.","ShortName":null,"Type":null,"PhoneNumber":"9876115817","Address":null,"EmployeeId":226,"IsActive":true,"InitialCreate":1494583141550,"LastUpdated":1494583443442}],"recordCount":1,"ServerCurrentTime":1495042151835,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:29:40 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=1494583443442","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"1494583443442"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:29:40 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495042180945,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:29:41 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=227&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"227","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:29:41 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495008927864}],"recordCount":1,"ServerCurrentTime":1495042181260,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:29:41 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:29:41 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":269,"Name":"Google","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494678268000,"LastUpdated":1494679782867},{"OrganizationId":270,"Name":"Bharti Airtel","ShortName":null,"Type":0,"PhoneNumber":"9874758965","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494681424139,"LastUpdated":1495008927423}],"recordCount":2,"ServerCurrentTime":1495042181548,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:29:41 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:29:41 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495042181885,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:40:57 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization/268","Method":{"put":true},"Params":{"id":"268"},"Query":{},"Body":{"AccountType":null,"AddDate1":0,"AddDate2":0,"AddNum1":0,"AddNum2":0,"AddPicklist1":null,"AddPicklist2":null,"AddPicklist3":null,"AddText1":null,"AddText2":null,"Address":null,"EmployeeId":227,"EmployeeNumber":null,"Industry":null,"InitialCreate":1494589505261,"IsActive":true,"IsRemoteSuccess":0,"LastUpdated":1495008927864,"LocalId":-2147483647,"Name":"Paypal","OrganizationId":268,"Ownership":null,"PhoneNumber":"+91965027617","RemoteExtra":null,"RemoteMessage":null,"Revenue":null,"ShortName":null,"Type":0,"assignSuccess":false,"isMine":false}}
+
+ Response Object (Time: Wed May 17 2017 17:40:57 GMT+0000 (UTC)) 
+{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495042857447}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:41:00 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=1494583443442","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"1494583443442"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:41:00 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495042860576,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:41:00 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=227&timestamp=1495008927864","Method":{"get":true},"Params":{},"Query":{"emp_id":"227","timestamp":"1495008927864"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:41:00 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495042857447}],"recordCount":1,"ServerCurrentTime":1495042860730,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:41:00 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=1495008927423","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"1495008927423"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:41:00 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495042860947,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:41:01 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:41:01 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495042861129,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:41:10 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization/268","Method":{"put":true},"Params":{"id":"268"},"Query":{},"Body":{"AccountType":null,"AddDate1":0,"AddDate2":0,"AddNum1":0,"AddNum2":0,"AddPicklist1":null,"AddPicklist2":null,"AddPicklist3":null,"AddText1":null,"AddText2":null,"Address":null,"EmployeeId":227,"EmployeeNumber":null,"Industry":null,"InitialCreate":1494589505261,"IsActive":true,"IsRemoteSuccess":0,"LastUpdated":1495042857447,"LocalId":-2147483647,"Name":"Paypal","OrganizationId":268,"Ownership":null,"PhoneNumber":"+91965027617","RemoteExtra":null,"RemoteMessage":null,"Revenue":null,"ShortName":null,"Type":0,"assignSuccess":false,"isMine":false}}
+
+ Response Object (Time: Wed May 17 2017 17:41:10 GMT+0000 (UTC)) 
+{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495042870768}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:41:11 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization/269","Method":{"put":true},"Params":{"id":"269"},"Query":{},"Body":{"AccountType":null,"AddDate1":0,"AddDate2":0,"AddNum1":0,"AddNum2":0,"AddPicklist1":null,"AddPicklist2":null,"AddPicklist3":null,"AddText1":null,"AddText2":null,"Address":null,"EmployeeId":228,"EmployeeNumber":null,"Industry":null,"InitialCreate":1494678268000,"IsActive":true,"IsRemoteSuccess":0,"LastUpdated":1494679782867,"LocalId":-2147483646,"Name":"Google","OrganizationId":269,"Ownership":null,"PhoneNumber":"+91965027617","RemoteExtra":null,"RemoteMessage":null,"Revenue":null,"ShortName":null,"Type":0,"assignSuccess":false,"isMine":false}}
+
+ Response Object (Time: Wed May 17 2017 17:41:11 GMT+0000 (UTC)) 
+{"OrganizationId":269,"Name":"Google","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494678268000,"LastUpdated":1495042871338}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:41:17 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=1494583443442","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"1494583443442"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:41:17 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495042877879,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:41:18 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=227&timestamp=1495042857447","Method":{"get":true},"Params":{},"Query":{"emp_id":"227","timestamp":"1495042857447"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:41:18 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495042870768}],"recordCount":1,"ServerCurrentTime":1495042878094,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:41:18 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=1495008927423","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"1495008927423"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:41:18 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":269,"Name":"Google","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494678268000,"LastUpdated":1495042871338}],"recordCount":1,"ServerCurrentTime":1495042878410,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:41:18 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:41:18 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495042878760,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:41:42 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=1494583443442","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"1494583443442"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:41:42 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495042902830,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:41:43 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=227&timestamp=1495042870768","Method":{"get":true},"Params":{},"Query":{"emp_id":"227","timestamp":"1495042870768"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:41:43 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495042903226,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:41:43 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=1495042871338","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"1495042871338"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:41:43 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495042903382,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:41:43 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:41:43 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495042903530,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:25:35 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=1494583443442","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"1494583443442"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:25:35 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495085135894,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:25:36 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=227&timestamp=1495042870768","Method":{"get":true},"Params":{},"Query":{"emp_id":"227","timestamp":"1495042870768"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:25:36 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495085136086,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:25:36 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=1495042871338","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"1495042871338"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:25:36 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495085136246,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:25:36 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:25:36 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495085136406,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:25:45 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization/268","Method":{"put":true},"Params":{"id":"268"},"Query":{},"Body":{"AccountType":null,"AddDate1":0,"AddDate2":0,"AddNum1":0,"AddNum2":0,"AddPicklist1":null,"AddPicklist2":null,"AddPicklist3":null,"AddText1":null,"AddText2":null,"Address":null,"EmployeeId":227,"EmployeeNumber":null,"Industry":null,"InitialCreate":1494589505261,"IsActive":true,"IsRemoteSuccess":0,"LastUpdated":1495042870768,"LocalId":-2147483647,"Name":"Paypal","OrganizationId":268,"Ownership":null,"PhoneNumber":"+91965027617","RemoteExtra":null,"RemoteMessage":null,"Revenue":null,"ShortName":null,"Type":0,"assignSuccess":false,"isMine":false}}
+
+ Response Object (Time: Thu May 18 2017 05:25:45 GMT+0000 (UTC)) 
+{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495085145909}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:25:50 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=1494583443442","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"1494583443442"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:25:50 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495085150107,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:25:50 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=227&timestamp=1495042870768","Method":{"get":true},"Params":{},"Query":{"emp_id":"227","timestamp":"1495042870768"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:25:50 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495085145909}],"recordCount":1,"ServerCurrentTime":1495085150274,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:25:50 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=1495042871338","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"1495042871338"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:25:50 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495085150451,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:25:50 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:25:50 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495085150610,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:31:14 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:31:14 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":267,"Name":"PM&Co.","ShortName":null,"Type":null,"PhoneNumber":"9876115817","Address":null,"EmployeeId":226,"IsActive":true,"InitialCreate":1494583141550,"LastUpdated":1494583443442}],"recordCount":1,"ServerCurrentTime":1495085474223,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:31:44 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=1494583443442","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"1494583443442"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:31:44 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495085504696,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:31:44 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=227&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"227","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:31:44 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495085145909}],"recordCount":1,"ServerCurrentTime":1495085504859,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:31:45 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:31:45 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":270,"Name":"Bharti Airtel","ShortName":null,"Type":0,"PhoneNumber":"9874758965","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494681424139,"LastUpdated":1495008927423},{"OrganizationId":269,"Name":"Google","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494678268000,"LastUpdated":1495042871338}],"recordCount":2,"ServerCurrentTime":1495085505031,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:31:45 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:31:45 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495085505244,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:32:29 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization/268","Method":{"put":true},"Params":{"id":"268"},"Query":{},"Body":{"AccountType":null,"AddDate1":0,"AddDate2":0,"AddNum1":0,"AddNum2":0,"AddPicklist1":null,"AddPicklist2":null,"AddPicklist3":null,"AddText1":null,"AddText2":null,"Address":null,"EmployeeId":227,"EmployeeNumber":null,"Industry":null,"InitialCreate":1494589505261,"IsActive":true,"IsRemoteSuccess":0,"LastUpdated":1495085145909,"LocalId":-2147483647,"Name":"Paypal","OrganizationId":268,"Ownership":null,"PhoneNumber":"+91965027617","RemoteExtra":null,"RemoteMessage":null,"Revenue":null,"ShortName":null,"Type":0,"assignSuccess":false,"isMine":false}}
+
+ Response Object (Time: Thu May 18 2017 05:32:29 GMT+0000 (UTC)) 
+{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495085549354}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:32:41 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=1494583443442","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"1494583443442"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:32:41 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495085561533,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:32:41 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=227&timestamp=1495085145909","Method":{"get":true},"Params":{},"Query":{"emp_id":"227","timestamp":"1495085145909"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:32:41 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495085549354}],"recordCount":1,"ServerCurrentTime":1495085561705,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:32:42 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=1495042871338","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"1495042871338"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:32:42 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495085562019,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:32:42 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:32:42 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495085562197,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:03:13 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:03:13 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":267,"Name":"PM&Co.","ShortName":null,"Type":null,"PhoneNumber":"9876115817","Address":null,"EmployeeId":226,"IsActive":true,"InitialCreate":1494583141550,"LastUpdated":1494583443442}],"recordCount":1,"ServerCurrentTime":1495087393860,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:03:42 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=1494583443442","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"1494583443442"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:03:42 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495087422120,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:03:42 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=227&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"227","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:03:42 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495085549354}],"recordCount":1,"ServerCurrentTime":1495087422277,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:03:42 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:03:42 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":270,"Name":"Bharti Airtel","ShortName":null,"Type":0,"PhoneNumber":"9874758965","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494681424139,"LastUpdated":1495008927423},{"OrganizationId":269,"Name":"Google","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494678268000,"LastUpdated":1495042871338}],"recordCount":2,"ServerCurrentTime":1495087422531,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:03:42 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:03:42 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495087422829,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:04:50 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization/268","Method":{"put":true},"Params":{"id":"268"},"Query":{},"Body":{"AccountType":null,"AddDate1":0,"AddDate2":0,"AddNum1":0,"AddNum2":0,"AddPicklist1":null,"AddPicklist2":null,"AddPicklist3":null,"AddText1":null,"AddText2":null,"Address":null,"EmployeeId":227,"EmployeeNumber":null,"Industry":null,"InitialCreate":1494589505261,"IsActive":true,"IsRemoteSuccess":0,"LastUpdated":1495085549354,"LocalId":-2147483647,"Name":"Paypal","OrganizationId":268,"Ownership":null,"PhoneNumber":"+91965027617","RemoteExtra":null,"RemoteMessage":null,"Revenue":null,"ShortName":null,"Type":0,"assignSuccess":false,"isMine":false}}
+
+ Response Object (Time: Thu May 18 2017 06:04:50 GMT+0000 (UTC)) 
+{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495087490449}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:05 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=1494583443442","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"1494583443442"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:05 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495087505438,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:05 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=227&timestamp=1495085549354","Method":{"get":true},"Params":{},"Query":{"emp_id":"227","timestamp":"1495085549354"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:05 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495087490449}],"recordCount":1,"ServerCurrentTime":1495087505600,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:05 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=1495042871338","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"1495042871338"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:05 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495087505839,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:05 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:05 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495087505998,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:08 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization/269","Method":{"put":true},"Params":{"id":"269"},"Query":{},"Body":{"AccountType":null,"AddDate1":0,"AddDate2":0,"AddNum1":0,"AddNum2":0,"AddPicklist1":null,"AddPicklist2":null,"AddPicklist3":null,"AddText1":null,"AddText2":null,"Address":null,"EmployeeId":228,"EmployeeNumber":null,"Industry":null,"InitialCreate":1494678268000,"IsActive":true,"IsRemoteSuccess":0,"LastUpdated":1495042871338,"LocalId":-2147483645,"Name":"Google","OrganizationId":269,"Ownership":null,"PhoneNumber":"+91965027617","RemoteExtra":null,"RemoteMessage":null,"Revenue":null,"ShortName":null,"Type":0,"assignSuccess":false,"isMine":false}}
+
+ Response Object (Time: Thu May 18 2017 06:05:08 GMT+0000 (UTC)) 
+{"OrganizationId":269,"Name":"Google","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494678268000,"LastUpdated":1495087508502}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:08 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization/270","Method":{"put":true},"Params":{"id":"270"},"Query":{},"Body":{"AccountType":null,"AddDate1":0,"AddDate2":0,"AddNum1":0,"AddNum2":0,"AddPicklist1":null,"AddPicklist2":null,"AddPicklist3":null,"AddText1":null,"AddText2":null,"Address":null,"EmployeeId":228,"EmployeeNumber":null,"Industry":null,"InitialCreate":1494681424139,"IsActive":true,"IsRemoteSuccess":0,"LastUpdated":1495008927423,"LocalId":-2147483646,"Name":"Bharti Airtel","OrganizationId":270,"Ownership":null,"PhoneNumber":"9874758965","RemoteExtra":null,"RemoteMessage":null,"Revenue":null,"ShortName":null,"Type":0,"assignSuccess":false,"isMine":false}}
+
+ Response Object (Time: Thu May 18 2017 06:05:08 GMT+0000 (UTC)) 
+{"OrganizationId":270,"Name":"Bharti Airtel","ShortName":null,"Type":0,"PhoneNumber":"9874758965","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494681424139,"LastUpdated":1495087508769}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:20 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=1494583443442","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"1494583443442"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:20 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495087520373,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:20 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=227&timestamp=1495087490449","Method":{"get":true},"Params":{},"Query":{"emp_id":"227","timestamp":"1495087490449"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:20 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495087520528,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:20 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=1495042871338","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"1495042871338"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:20 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":269,"Name":"Google","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494678268000,"LastUpdated":1495087508502},{"OrganizationId":270,"Name":"Bharti Airtel","ShortName":null,"Type":0,"PhoneNumber":"9874758965","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494681424139,"LastUpdated":1495087508769}],"recordCount":2,"ServerCurrentTime":1495087520690,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:21 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:21 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495087521008,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:23 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization/268","Method":{"put":true},"Params":{"id":"268"},"Query":{},"Body":{"AccountType":null,"AddDate1":0,"AddDate2":0,"AddNum1":0,"AddNum2":0,"AddPicklist1":null,"AddPicklist2":null,"AddPicklist3":null,"AddText1":null,"AddText2":null,"Address":null,"EmployeeId":227,"EmployeeNumber":null,"Industry":null,"InitialCreate":1494589505261,"IsActive":true,"IsRemoteSuccess":0,"LastUpdated":1495087490449,"LocalId":-2147483647,"Name":"Paypal","OrganizationId":268,"Ownership":null,"PhoneNumber":"+91965027617","RemoteExtra":null,"RemoteMessage":null,"Revenue":null,"ShortName":null,"Type":0,"assignSuccess":false,"isMine":false}}
+
+ Response Object (Time: Thu May 18 2017 06:05:23 GMT+0000 (UTC)) 
+{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495087523531}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:23 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization/269","Method":{"put":true},"Params":{"id":"269"},"Query":{},"Body":{"AccountType":null,"AddDate1":0,"AddDate2":0,"AddNum1":0,"AddNum2":0,"AddPicklist1":null,"AddPicklist2":null,"AddPicklist3":null,"AddText1":null,"AddText2":null,"Address":null,"EmployeeId":228,"EmployeeNumber":null,"Industry":null,"InitialCreate":1494678268000,"IsActive":true,"IsRemoteSuccess":0,"LastUpdated":1495087508502,"LocalId":-2147483645,"Name":"Google","OrganizationId":269,"Ownership":null,"PhoneNumber":"+91965027617","RemoteExtra":null,"RemoteMessage":null,"Revenue":null,"ShortName":null,"Type":0,"assignSuccess":false,"isMine":false}}
+
+ Response Object (Time: Thu May 18 2017 06:05:23 GMT+0000 (UTC)) 
+{"OrganizationId":269,"Name":"Google","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494678268000,"LastUpdated":1495087523750}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:23 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization/270","Method":{"put":true},"Params":{"id":"270"},"Query":{},"Body":{"AccountType":null,"AddDate1":0,"AddDate2":0,"AddNum1":0,"AddNum2":0,"AddPicklist1":null,"AddPicklist2":null,"AddPicklist3":null,"AddText1":null,"AddText2":null,"Address":null,"EmployeeId":228,"EmployeeNumber":null,"Industry":null,"InitialCreate":1494681424139,"IsActive":true,"IsRemoteSuccess":0,"LastUpdated":1495087508769,"LocalId":-2147483646,"Name":"Bharti Airtel","OrganizationId":270,"Ownership":null,"PhoneNumber":"9874758965","RemoteExtra":null,"RemoteMessage":null,"Revenue":null,"ShortName":null,"Type":0,"assignSuccess":false,"isMine":false}}
+
+ Response Object (Time: Thu May 18 2017 06:05:23 GMT+0000 (UTC)) 
+{"OrganizationId":270,"Name":"Bharti Airtel","ShortName":null,"Type":0,"PhoneNumber":"9874758965","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494681424139,"LastUpdated":1495087523949}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:35 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=1494583443442","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"1494583443442"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:35 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495087535454,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:35 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=227&timestamp=1495087490449","Method":{"get":true},"Params":{},"Query":{"emp_id":"227","timestamp":"1495087490449"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:35 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495087523531}],"recordCount":1,"ServerCurrentTime":1495087535607,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:35 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=1495087508769","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"1495087508769"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:35 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":269,"Name":"Google","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494678268000,"LastUpdated":1495087523750},{"OrganizationId":270,"Name":"Bharti Airtel","ShortName":null,"Type":0,"PhoneNumber":"9874758965","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494681424139,"LastUpdated":1495087523949}],"recordCount":2,"ServerCurrentTime":1495087535834,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:36 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:36 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495087536016,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:45 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=1494583443442","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"1494583443442"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:45 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495087545949,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:46 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=227&timestamp=1495087523531","Method":{"get":true},"Params":{},"Query":{"emp_id":"227","timestamp":"1495087523531"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:46 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495087546108,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:46 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=1495087523949","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"1495087523949"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:46 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495087546268,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:46 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:46 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495087546480,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:48 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization/268","Method":{"put":true},"Params":{"id":"268"},"Query":{},"Body":{"AccountType":null,"AddDate1":0,"AddDate2":0,"AddNum1":0,"AddNum2":0,"AddPicklist1":null,"AddPicklist2":null,"AddPicklist3":null,"AddText1":null,"AddText2":null,"Address":null,"EmployeeId":227,"EmployeeNumber":null,"Industry":null,"InitialCreate":1494589505261,"IsActive":true,"IsRemoteSuccess":0,"LastUpdated":1495087523531,"LocalId":-2147483647,"Name":"Paypal","OrganizationId":268,"Ownership":null,"PhoneNumber":"+91965027617","RemoteExtra":null,"RemoteMessage":null,"Revenue":null,"ShortName":null,"Type":0,"assignSuccess":false,"isMine":false}}
+
+ Response Object (Time: Thu May 18 2017 06:05:48 GMT+0000 (UTC)) 
+{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495087548745}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:57 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=1494583443442","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"1494583443442"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:57 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495087557647,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:57 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=227&timestamp=1495087523531","Method":{"get":true},"Params":{},"Query":{"emp_id":"227","timestamp":"1495087523531"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:57 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495087548745}],"recordCount":1,"ServerCurrentTime":1495087557816,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:58 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=1495087523949","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"1495087523949"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:58 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495087558120,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:05:58 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:05:58 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495087558360,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 08:59:45 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 08:59:45 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495097985030,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 09:20:55 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization/269","Method":{"put":true},"Params":{"id":"269"},"Query":{},"Body":{"AccountType":"Existing Customer","AddDate1":0,"AddDate2":0,"AddNum1":0,"AddNum2":0,"AddPicklist1":null,"AddPicklist2":null,"AddPicklist3":null,"AddText1":null,"AddText2":null,"Address":null,"EmployeeId":228,"EmployeeNumber":"401 - 600","Industry":"Energy","InitialCreate":1494678268000,"IsActive":true,"IsRemoteSuccess":0,"LastUpdated":1495087523750,"LocalId":-2147483647,"Name":"Google","OrganizationId":269,"Ownership":"Sole Proprietorship","PhoneNumber":"+91965027617","RemoteExtra":null,"RemoteMessage":null,"Revenue":"1 Cr - 50 Cr","ShortName":null,"Type":0,"assignSuccess":false,"isMine":false}}
+
+ Response Object (Time: Thu May 18 2017 09:20:55 GMT+0000 (UTC)) 
+{"OrganizationId":269,"Name":"Google","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494678268000,"LastUpdated":1495099255144}
+
+
+
+Request Object (Time:  Thu May 18 2017 09:21:58 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 09:21:58 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495099318441,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 09:39:09 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/lead","Method":{"post":true},"Params":{},"Query":{},"Body":{"AmcId":null,"Amount":51000,"Commissionrate":" - ","Contact":null,"ContactId":2190,"Contacteddate":null,"Currentstate":1,"EmployeeId":229,"Expectedclouserdate":1514572200000,"Expectedclouserdatetime":null,"InitialCreate":1495100337476,"Innegotiationdate":null,"IsActive":true,"IsIndividual":0,"IsReassigned":0,"Isfresh":0,"Iswon":0,"LastUpdated":null,"LeadId":null,"LeadProdInfo":[{"AccountId":42,"Active":1,"Amount":51000,"CloseDate":null,"CommissionRate":null,"EmployeeId":229,"Id":0,"InitialCreate":0,"LastUpdated":0,"LeadId":-2147483645,"LocalId":-2147483635,"ProductCode":91,"ProductName":"Product2","Stage":"Prospects","SubProductId":0,"SubProductName":null,"Unit":0}],"LeadSourceId":8,"LeadSourceSubString":"Abhishek Dwivedi","LeadStageCalculation":[{"Active":1,"EndDate":null,"Extra":null,"InitialCreate":0,"InitialPositionLevel":1,"LastUpdated":0,"LeadId":-2147483645,"LocalId":-2147483633,"NumberOfDays":0,"StageCalculationId":0,"StageName":"Prospects","StageSettingId":228,"StartDate":1494959400000,"UpdatedPositionLevel":1}],"LocalId":-2147483645,"Lostdate":null,"Lostreason":"","Name":"Google Product2 Deal","Notes":[{"Addedon":1495100337623,"AgentId":null,"ContactId":null,"EmployeeId":229,"InitialCreate":null,"IsActive":false,"IsRemoteSuccess":0,"LastUpdated":null,"LeadId":-2147483645,"LocalId":-2147483623,"MeetingId":null,"NoteId":null,"RemoteExtra":null,"RemoteMessage":null,"Text":"Lead notes"}],"Organization":null,"OrganizationId":269,"ProductId":null,"ProposalClickedDate":null,"ProposalFinalizedDate":null,"Proposalgivendate":null,"Prospectsdate":null,"Seen":1,"StageCalculationId":-2147483633,"WonLostByEmployeeId":0,"WonLostByEmployeeName":null,"Wondate":null,"assignSuccess":false}}
+
+ Response Object (Time: Thu May 18 2017 09:39:09 GMT+0000 (UTC)) 
+{"OrganizationId":269,"Name":"Google","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494678268000,"LastUpdated":1495099255144}
+
+
+
+Request Object (Time:  Thu May 18 2017 09:39:39 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization/269","Method":{"put":true},"Params":{"id":"269"},"Query":{},"Body":{"AccountType":null,"AddDate1":0,"AddDate2":0,"AddNum1":0,"AddNum2":0,"AddPicklist1":null,"AddPicklist2":null,"AddPicklist3":null,"AddText1":null,"AddText2":null,"Address":null,"EmployeeId":228,"EmployeeNumber":null,"Industry":null,"InitialCreate":1494678268000,"IsActive":true,"IsRemoteSuccess":0,"LastUpdated":1495099255144,"LocalId":-2147483647,"Name":"Google","OrganizationId":269,"Ownership":null,"PhoneNumber":"+91965027617","RemoteExtra":null,"RemoteMessage":null,"Revenue":null,"ShortName":null,"Type":0,"assignSuccess":false,"isMine":false}}
+
+ Response Object (Time: Thu May 18 2017 09:39:39 GMT+0000 (UTC)) 
+{"OrganizationId":269,"Name":"Google","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494678268000,"LastUpdated":1495100379481}
+
+
+
+Request Object (Time:  Thu May 18 2017 09:39:54 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 09:39:54 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495100394028,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 10:05:11 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 10:05:11 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":267,"Name":"PM&Co.","ShortName":null,"Type":null,"PhoneNumber":"9876115817","Address":null,"EmployeeId":226,"IsActive":true,"InitialCreate":1494583141550,"LastUpdated":1494583443442}],"recordCount":1,"ServerCurrentTime":1495101911431,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 10:05:34 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=1494583443442","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"1494583443442"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 10:05:34 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495101934668,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 10:05:34 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=227&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"227","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 10:05:34 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":268,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":227,"IsActive":true,"InitialCreate":1494589505261,"LastUpdated":1495087548745}],"recordCount":1,"ServerCurrentTime":1495101934827,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 10:05:34 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 10:05:34 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":270,"Name":"Bharti Airtel","ShortName":null,"Type":0,"PhoneNumber":"9874758965","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494681424139,"LastUpdated":1495087523949},{"OrganizationId":269,"Name":"Google","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1494678268000,"LastUpdated":1495100379481}],"recordCount":2,"ServerCurrentTime":1495101934991,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 10:05:35 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 10:05:35 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495101935179,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 10:07:00 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=1494583443442","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"1494583443442"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 10:07:00 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495102020395,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 10:07:00 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=227&timestamp=1495087548745","Method":{"get":true},"Params":{},"Query":{"emp_id":"227","timestamp":"1495087548745"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 10:07:00 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495102020549,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 10:07:00 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=1495100379481","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"1495100379481"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 10:07:00 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"OrganizationId":272,"Name":"Paypal","ShortName":null,"Type":0,"PhoneNumber":"+91965027617","Address":null,"EmployeeId":228,"IsActive":true,"InitialCreate":1495102005024,"LastUpdated":1495102005024}],"recordCount":1,"ServerCurrentTime":1495102020706,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 10:07:00 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 10:07:00 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495102020886,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 16:06:49 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=226&timestamp=1494583443442","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"1494583443442"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 16:06:49 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495123609243,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 16:06:49 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=227&timestamp=1495087548745","Method":{"get":true},"Params":{},"Query":{"emp_id":"227","timestamp":"1495087548745"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 16:06:49 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495123609639,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 16:06:50 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=228&timestamp=1495102005024","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"1495102005024"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 16:06:50 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495123610175,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 16:06:50 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/organization?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 16:06:50 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495123610519,"moreRecordsAvailable":false}
+
+
+

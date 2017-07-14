@@ -1,0 +1,339 @@
+"use strict";
+var async = require('async');
+var db = require('../../models');
+var response = require('../../helpers/response');
+var _ = require('underscore');
+var moment = require('moment');
+var sequelize = require('sequelize');
+var log = require("../../api_logs/create_logs");
+var logFile = "lead_assign_log.txt";
+
+exports.leadAssign = function(req,res){
+    var currentTime = new Date().getTime();
+    var filters = req.query;
+    var currentUser = req.currentUser;
+    var leadIds = req.body.LeadIds || null;
+    var EmployeeId = req.body.EmployeeId || null;
+
+    db.lead.findAll({
+
+       where : { lead_id : { in: leadIds  } },
+       include: [ { model : db.contact } ]
+    }).then(function(leads)
+    {
+      //res.send(leads);
+       if(leads.length > 0)
+       {
+        //res.send(leads);
+         var currentTime = new Date().getTime();
+
+
+                  var items = leads.map(function (c)
+                  {
+
+                    // console.log("Lead id is------------>"+c.lead_id);
+                    if(c.contact)
+                    {
+                      var contactObject = c.contact;
+                    }else
+                    {
+                       var contactObject = null;
+                    }
+                      // console.log("Before calling function.............");
+                      createContactWithLeadUpdate(req,res,contactObject,currentTime,c);
+                      // console.log("After calling function.............");
+                        
+                  });
+
+           
+           
+            
+         setTimeout(function(){
+
+                   db.lead_log.findAll(
+                   {
+                      where : { initial_create : currentTime },
+                      include:[{model: db.lead ,include:[ { model: db.contact }]}]
+
+                    }).then(function(lls)
+                    {
+                      //res.send(lls);
+
+                          var items = lls.map(function (c) {
+
+                            var objectC = returnContact(c.lead.contact);
+                                
+                                  return c.toModel(objectC);
+                          });
+                       
+
+                       log.run(req,items,logFile);
+                       response(res).page(items);
+
+                    });
+
+         },1000);
+
+           
+
+             
+       }
+       else
+       {
+               var resJson = {
+                        success: false,
+                        ErrorCode: 116,
+                        message: 'Unable to find Leads of these ids',
+                        ServerCurrentTime: new Date().getTime(),
+                        
+                        };
+
+                log.run(req,resJson,logFile);        
+
+              res.json(resJson);
+
+
+       }
+
+     
+
+    });
+
+
+};
+
+
+
+function createContactWithLeadUpdate(req,res,objectContact,currentTime,leadObject)
+{
+   var objectC = {};
+
+   // console.log("------------->object COntact"+objectContact);
+  
+   
+    if(objectContact)
+    {
+      objectC.name = objectContact.name;
+      objectC.account_id = req.currentUser.AccountId;
+      objectC.number = objectContact.number;
+      objectC.email = objectContact.email;
+      objectC.address = objectContact.address;
+      objectC.isLink = objectContact.isLink;
+      objectC.organization_id = objectContact.organization_id;
+      objectC.employee_id = req.body.EmployeeId || null;
+      objectC.initial_create =currentTime;
+      objectC.last_updated = currentTime;
+
+
+      db.contact.create(objectC).then(function(cont)
+      {
+
+            db.organization.findOne({
+
+               where: { organization_id : cont.organization_id  }
+            }).then(function(orgObject)
+            {
+                 var tempOrg ={};
+
+                 if(orgObject)
+                 {
+
+                       tempOrg.account_id = orgObject.account_id;
+                       tempOrg.employee_id = req.body.EmployeeId || null;
+                       tempOrg.name = orgObject.name;
+                       tempOrg.short_name = orgObject.short_name;
+                       tempOrg.phone_number = orgObject.phone_number;
+                       tempOrg.type = orgObject.type;
+                       tempOrg.initial_create = currentTime;
+                       tempOrg.last_updated = currentTime;
+
+                       db.organization.create(tempOrg).then(function(org)
+                       {
+
+
+                              /**** lead update start ***/
+
+                             db.lead.update({
+
+                                 employee_id : req.body.EmployeeId || null,
+                                 isReassigned: 1,
+                                 contact_id : cont.contact_id,
+                                 organization_id:org.organization_id,
+                                 last_updated: currentTime
+                               },
+                               {
+                                    where : { lead_id : leadObject.lead_id  }
+                               }).then(function(lu)
+                               {
+
+                                  db.meeting.update({
+
+                                    employee_id: req.body.EmployeeId || null,
+                                    last_updated: currentTime
+                                  },{
+                                      where: {lead_id: leadObject.lead_id }
+                                  }).then(function(mu){
+
+                                     var tempLeadLog = {
+
+                                              lead_id : leadObject.lead_id,
+                                              old_employee_id : leadObject.employee_id,
+                                              new_employee_id : req.body.EmployeeId || null,
+                                              assigned_by_id : req.currentUser.EmployeeId,
+                                              initial_create : currentTime,
+                                              last_updated : currentTime
+                                  };
+                                   db.lead_log.create(tempLeadLog).then(function(llog)
+                                   {
+                                      // console.log(llog.id);
+
+
+                                   });
+
+                                  });
+                                  
+                                  
+                               });
+
+
+                              /**** lead update end ******/
+
+
+
+
+
+                       });
+
+
+
+                 }else
+                 {
+
+                    /**** lead update start *****/
+
+
+                        db.lead.update({
+
+                         employee_id : req.body.EmployeeId || null,
+                         isReassigned: 1,
+                         contact_id : cont.contact_id,
+                         organization_id: null,
+                         last_updated: currentTime
+                      },
+                     {
+                          where : { lead_id : leadObject.lead_id  }
+                     }).then(function(lu)
+                     {
+                         var tempLeadLog = {
+
+                                    lead_id : leadObject.lead_id,
+                                    old_employee_id : leadObject.employee_id,
+                                    new_employee_id : req.body.EmployeeId || null,
+                                    assigned_by_id : req.currentUser.EmployeeId,
+                                    initial_create : currentTime,
+                                    last_updated : currentTime
+                        };
+                           db.lead_log.create(tempLeadLog).then(function(llog)
+                           {
+                              // console.log(llog.id);
+
+
+                           });
+            
+                  });
+
+
+
+                    /**** lead update end ****/
+
+
+
+
+                 }
+                
+
+            });
+ 
+       
+           
+        }).catch(function(err){
+
+             response(res).failure(err);
+
+        });
+    
+
+
+
+    }else
+    {
+      
+          db.lead.update({
+
+           employee_id : req.body.EmployeeId || null,
+           isReassigned: 1,
+           contact_id : null,
+           organization_id:null,
+           last_updated: currentTime
+         },
+         {
+             where : { lead_id : leadObject.lead_id  }
+         }
+         ).then(function(lu)
+         {
+             var tempLeadLog = {
+
+                        lead_id : leadObject.lead_id,
+                        old_employee_id : leadObject.employee_id,
+                        new_employee_id : req.body.EmployeeId || null,
+                        assigned_by_id : req.currentUser.EmployeeId,
+                        initial_create : currentTime,
+                        last_updated : currentTime
+            };
+             db.lead_log.create(tempLeadLog).then(function(llog)
+             {
+                // console.log(llog.id);
+
+
+             });
+            
+         });
+
+
+
+
+
+    }  
+      
+
+
+
+}
+
+function returnContact(obContact)
+{
+    var jsonContact = {};
+    //// console.log("Contact Id is ---->"+contact_id);
+    
+        jsonContact = {
+           
+            ContactId: obContact.contact_id || null,
+            //AccountId: obContact.account_id || null,
+            Name : obContact.name || null,
+            Number : obContact.number || null,
+            Email : obContact.email || null,
+            Address : obContact.address || null,
+            IsLink : obContact.isLink || null,
+            EmployeeId: obContact.employee_id || null,
+            OrganizationId: obContact.organization_id || null,
+            InitialCreate:obContact.initial_create || null,
+            LastUpdated:obContact.last_updated || null,
+            //Active: obContact.active
+
+        }
+    
+
+    return jsonContact;
+
+
+}

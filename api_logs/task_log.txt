@@ -1,0 +1,216 @@
+Request Object (Time:  Fri Apr 21 2017 12:59:34 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=201&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Fri Apr 21 2017 12:59:34 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"TaskId":26,"Name":"To get update ","Reminder":63180000,"Duedate":1490639400000,"Duedatetime":null,"Completedon":null,"Completedondate":null,"ContactId":null,"Contact":null,"LeadId":null,"Lead":null,"EmployeeId":201,"IsActive":true,"InitialCreate":1490722466158,"LastUpdated":1490722466158}],"recordCount":1,"ServerCurrentTime":1492779574995,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Fri Apr 21 2017 13:00:26 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=201&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Fri Apr 21 2017 13:00:26 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"TaskId":26,"Name":"To get update ","Reminder":63180000,"Duedate":1490639400000,"Duedatetime":null,"Completedon":null,"Completedondate":null,"ContactId":null,"Contact":null,"LeadId":null,"Lead":null,"EmployeeId":201,"IsActive":true,"InitialCreate":1490722466158,"LastUpdated":1490722466158}],"recordCount":1,"ServerCurrentTime":1492779626617,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat Apr 22 2017 06:31:58 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=201&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat Apr 22 2017 06:31:58 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"TaskId":26,"Name":"To get update ","Reminder":63180000,"Duedate":1490639400000,"Duedatetime":null,"Completedon":null,"Completedondate":null,"ContactId":null,"Contact":null,"LeadId":null,"Lead":null,"EmployeeId":201,"IsActive":true,"InitialCreate":1490722466158,"LastUpdated":1490722466158}],"recordCount":1,"ServerCurrentTime":1492842718439,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 04 2017 08:54:13 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=201&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 04 2017 08:54:13 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"TaskId":26,"Name":"To get update ","Reminder":63180000,"Duedate":1490639400000,"Duedatetime":null,"Completedon":null,"Completedondate":null,"ContactId":null,"Contact":null,"LeadId":null,"Lead":null,"EmployeeId":201,"IsActive":true,"InitialCreate":1490722466158,"LastUpdated":1490722466158}],"recordCount":1,"ServerCurrentTime":1493888053806,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 04 2017 09:51:44 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=201&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 04 2017 09:51:44 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"TaskId":26,"Name":"To get update ","Reminder":63180000,"Duedate":1490639400000,"Duedatetime":null,"Completedon":null,"Completedondate":null,"ContactId":null,"Contact":null,"LeadId":null,"Lead":null,"EmployeeId":201,"IsActive":true,"InitialCreate":1490722466158,"LastUpdated":1490722466158}],"recordCount":1,"ServerCurrentTime":1493891504096,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 05:52:01 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=201&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 05:52:01 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"TaskId":26,"Name":"To get update ","Reminder":63180000,"Duedate":1490639400000,"Duedatetime":null,"Completedon":null,"Completedondate":null,"ContactId":null,"Contact":null,"LeadId":null,"Lead":null,"EmployeeId":201,"IsActive":true,"InitialCreate":1490722466158,"LastUpdated":1490722466158}],"recordCount":1,"ServerCurrentTime":1494654721777,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 05:52:25 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=201&timestamp=1490722466158","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"1490722466158"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 05:52:25 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494654745420,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:13:20 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=201&timestamp=1490722466158","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"1490722466158"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:13:20 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494659600902,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:13:37 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=201&timestamp=1490722466158","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"1490722466158"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:13:37 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494659617302,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:38:00 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=201&timestamp=1490722466158","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"1490722466158"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:38:00 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494661080874,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Sat May 13 2017 07:38:17 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=201&timestamp=1490722466158","Method":{"get":true},"Params":{},"Query":{"emp_id":"201","timestamp":"1490722466158"},"Body":{}}
+
+ Response Object (Time: Sat May 13 2017 07:38:17 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1494661097960,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 08:10:08 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=228&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 08:10:08 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495008608214,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 08:10:33 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=228&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"228","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 08:10:33 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495008633751,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:29:12 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=226&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:29:12 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495042152984,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Wed May 17 2017 17:29:48 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=226&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Wed May 17 2017 17:29:48 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495042188307,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:31:15 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=226&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:31:15 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495085475021,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 05:31:50 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=226&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 05:31:50 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495085510641,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:03:14 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=226&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:03:14 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495087394662,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 06:03:47 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=226&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 06:03:47 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495087427911,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 09:00:01 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=229&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 09:00:01 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"TaskId":32,"Name":"Reminder to reschedule meeting","Reminder":43980000,"Duedate":1494613800000,"Duedatetime":null,"Completedon":null,"Completedondate":null,"ContactId":2190,"Contact":{"ContactId":2190,"Name":"Abhishek Dwivedi","Number":"+91965027617","Email":"","Address":"","Seen":1,"IsLink":null,"OrganizationId":null,"EmployeeId":229,"InitialCreate":1494663600801,"LastUpdated":1495087524393},"LeadId":2289,"Lead":{"LeadId":2289,"Name":"Abhishek Dwivedi Product2 Deal","Amount":65000,"Iswon":0,"Expectedclouserdate":1525026600000,"Expectedclouserdatetime":null,"Isfresh":0,"Commissionrate":" - ","Lostreason":"Product does not meet requirements;Better competitor Solution;Timing is not right;Customer has put buy on hold;Pricing was high","Prospectsdate":null,"Contacteddate":null,"Proposalgivendate":null,"ProposalFinalizedDate":null,"Innegotiationdate":null,"Wondate":null,"Lostdate":null,"Currentstate":8,"ContactId":2190,"Seen":1,"AmcId":null,"EmployeeId":229,"LeadSourceId":52,"LeadSourceSubString":"","ProductId":null,"OrganizationId":null,"WonLostByEmployeeId":229,"WonLostByEmployeeName":"Sudhanshu","LeadStageCalculation":[{"StageCalculationId":8577,"StageName":"Prospects","StageSettingId":228,"StartDate":1494527400000,"EndDate":1494666750502,"NumberOfDays":1,"InitialPositionLevel":1,"UpdatedPositionLevel":"1","Status":null,"LeadId":2289,"Active":1,"InitialCreate":1494589463737,"LastUpdated":1494666881781},{"StageCalculationId":8587,"StageName":"Contacted","StageSettingId":229,"StartDate":1494666750521,"EndDate":1494666814190,"NumberOfDays":0,"InitialPositionLevel":2,"UpdatedPositionLevel":"2","Status":null,"LeadId":2289,"Active":1,"InitialCreate":1494666765384,"LastUpdated":1494666881781},{"StageCalculationId":8588,"StageName":"Proposal Given","StageSettingId":230,"StartDate":1494666814219,"EndDate":1494666814219,"NumberOfDays":0,"InitialPositionLevel":3,"UpdatedPositionLevel":"3","Status":null,"LeadId":2289,"Active":1,"InitialCreate":1494666842783,"LastUpdated":1494666881781},{"StageCalculationId":8589,"StageName":"Proposal Finalized","StageSettingId":234,"StartDate":1494666814239,"EndDate":1494666814239,"NumberOfDays":0,"InitialPositionLevel":4,"UpdatedPositionLevel":"4","Status":null,"LeadId":2289,"Active":1,"InitialCreate":1494666842791,"LastUpdated":1494666881781},{"StageCalculationId":8590,"StageName":"In Negotiation","StageSettingId":231,"StartDate":1494666814259,"EndDate":1494666814310,"NumberOfDays":0,"InitialPositionLevel":5,"UpdatedPositionLevel":"5","Status":null,"LeadId":2289,"Active":1,"InitialCreate":1494666842794,"LastUpdated":1494666881781},{"StageCalculationId":8591,"StageName":"Won","StageSettingId":232,"StartDate":1494666814290,"EndDate":1494666814290,"NumberOfDays":0,"InitialPositionLevel":7,"UpdatedPositionLevel":"7","Status":null,"LeadId":2289,"Active":1,"InitialCreate":1494666842798,"LastUpdated":1494666881781},{"StageCalculationId":8592,"StageName":"Lost","StageSettingId":233,"StartDate":1494666814310,"EndDate":null,"NumberOfDays":0,"InitialPositionLevel":8,"UpdatedPositionLevel":"8","Status":null,"LeadId":2289,"Active":1,"InitialCreate":1494666842802,"LastUpdated":1494666881781}],"InitialCreate":1494589463555,"LastUpdated":1494666881813},"EmployeeId":229,"IsActive":true,"InitialCreate":1494666866362,"LastUpdated":1494666866362}],"recordCount":1,"ServerCurrentTime":1495098001745,"moreRecordsAvailable":true}
+
+
+
+Request Object (Time:  Thu May 18 2017 09:00:03 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=229&timestamp=1494666866362","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"1494666866362"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 09:00:03 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495098003283,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 10:03:09 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task/32","Method":{"put":true},"Params":{"id":"32"},"Query":{},"Body":{"AgentId":null,"Completedon":1495101786030,"Completedondate":null,"Contact":null,"ContactId":2190,"Duedate":1494613800000,"Duedatetime":null,"EmployeeId":229,"InitialCreate":1494666866362,"IsActive":true,"IsRemoteSuccess":0,"LastUpdated":1494666866362,"Lead":null,"LeadId":2289,"LocalId":-2147483648,"Name":"Reminder to reschedule meeting","Reminder":43980000,"RemoteExtra":null,"RemoteMessage":null,"TaskId":32}}
+
+ Response Object (Time: Thu May 18 2017 10:03:09 GMT+0000 (UTC)) 
+{"TaskId":32,"Name":"Reminder to reschedule meeting","Reminder":43980000,"Duedate":1494613800000,"Duedatetime":null,"Completedon":1495101786030,"Completedondate":null,"ContactId":2190,"LeadId":2289,"EmployeeId":229,"IsActive":true,"InitialCreate":1494666866362,"LastUpdated":1495101789118}
+
+
+
+Request Object (Time:  Thu May 18 2017 10:03:24 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=229&timestamp=1494666866362","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"1494666866362"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 10:03:24 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[{"TaskId":32,"Name":"Reminder to reschedule meeting","Reminder":43980000,"Duedate":1494613800000,"Duedatetime":null,"Completedon":1495101786030,"Completedondate":null,"ContactId":2190,"Contact":{"ContactId":2190,"Name":"Abhishek Dwivedi","Number":"+91965027617","Email":"","Address":"","Seen":1,"IsLink":null,"OrganizationId":null,"EmployeeId":229,"InitialCreate":1494663600801,"LastUpdated":1495100379749},"LeadId":2289,"Lead":{"LeadId":2289,"Name":"Abhishek Dwivedi Product2 Deal","Amount":65000,"Iswon":0,"Expectedclouserdate":1525026600000,"Expectedclouserdatetime":null,"Isfresh":0,"Commissionrate":" - ","Lostreason":"Product does not meet requirements;Better competitor Solution;Timing is not right;Customer has put buy on hold;Pricing was high","Prospectsdate":null,"Contacteddate":null,"Proposalgivendate":null,"ProposalFinalizedDate":null,"Innegotiationdate":null,"Wondate":null,"Lostdate":null,"Currentstate":8,"ContactId":2190,"Seen":1,"AmcId":null,"EmployeeId":229,"LeadSourceId":52,"LeadSourceSubString":"","ProductId":null,"OrganizationId":null,"WonLostByEmployeeId":229,"WonLostByEmployeeName":"Sudhanshu","LeadStageCalculation":[{"StageCalculationId":8577,"StageName":"Prospects","StageSettingId":228,"StartDate":1494527400000,"EndDate":1494666750502,"NumberOfDays":1,"InitialPositionLevel":1,"UpdatedPositionLevel":"1","Status":null,"LeadId":2289,"Active":1,"InitialCreate":1494589463737,"LastUpdated":1494666881781},{"StageCalculationId":8587,"StageName":"Contacted","StageSettingId":229,"StartDate":1494666750521,"EndDate":1494666814190,"NumberOfDays":0,"InitialPositionLevel":2,"UpdatedPositionLevel":"2","Status":null,"LeadId":2289,"Active":1,"InitialCreate":1494666765384,"LastUpdated":1494666881781},{"StageCalculationId":8588,"StageName":"Proposal Given","StageSettingId":230,"StartDate":1494666814219,"EndDate":1494666814219,"NumberOfDays":0,"InitialPositionLevel":3,"UpdatedPositionLevel":"3","Status":null,"LeadId":2289,"Active":1,"InitialCreate":1494666842783,"LastUpdated":1494666881781},{"StageCalculationId":8589,"StageName":"Proposal Finalized","StageSettingId":234,"StartDate":1494666814239,"EndDate":1494666814239,"NumberOfDays":0,"InitialPositionLevel":4,"UpdatedPositionLevel":"4","Status":null,"LeadId":2289,"Active":1,"InitialCreate":1494666842791,"LastUpdated":1494666881781},{"StageCalculationId":8590,"StageName":"In Negotiation","StageSettingId":231,"StartDate":1494666814259,"EndDate":1494666814310,"NumberOfDays":0,"InitialPositionLevel":5,"UpdatedPositionLevel":"5","Status":null,"LeadId":2289,"Active":1,"InitialCreate":1494666842794,"LastUpdated":1494666881781},{"StageCalculationId":8591,"StageName":"Won","StageSettingId":232,"StartDate":1494666814290,"EndDate":1494666814290,"NumberOfDays":0,"InitialPositionLevel":7,"UpdatedPositionLevel":"7","Status":null,"LeadId":2289,"Active":1,"InitialCreate":1494666842798,"LastUpdated":1494666881781},{"StageCalculationId":8592,"StageName":"Lost","StageSettingId":233,"StartDate":1494666814310,"EndDate":null,"NumberOfDays":0,"InitialPositionLevel":8,"UpdatedPositionLevel":"8","Status":null,"LeadId":2289,"Active":1,"InitialCreate":1494666842802,"LastUpdated":1494666881781}],"InitialCreate":1494589463555,"LastUpdated":1494666881813},"EmployeeId":229,"IsActive":true,"InitialCreate":1494666866362,"LastUpdated":1495101789118}],"recordCount":1,"ServerCurrentTime":1495101804076,"moreRecordsAvailable":true}
+
+
+
+Request Object (Time:  Thu May 18 2017 10:03:24 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=229&timestamp=1495101789118","Method":{"get":true},"Params":{},"Query":{"emp_id":"229","timestamp":"1495101789118"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 10:03:24 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495101804240,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 10:05:12 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=226&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 10:05:12 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495101912186,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 10:05:41 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=226&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 10:05:41 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495101941115,"moreRecordsAvailable":false}
+
+
+
+Request Object (Time:  Thu May 18 2017 16:06:53 GMT+0000 (UTC)):  
+ {"OriginalUrl":"/v2/task?emp_id=226&timestamp=0","Method":{"get":true},"Params":{},"Query":{"emp_id":"226","timestamp":"0"},"Body":{}}
+
+ Response Object (Time: Thu May 18 2017 16:06:53 GMT+0000 (UTC)) 
+{"success":true,"ErrorCode":100,"message":"completed sucessfully","items":[],"recordCount":0,"ServerCurrentTime":1495123613540,"moreRecordsAvailable":false}
+
+
+

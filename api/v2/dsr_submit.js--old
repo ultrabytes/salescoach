@@ -1,0 +1,507 @@
+"use strict";
+var async = require('async');
+var db = require('../../models');
+var response = require('../../helpers/response');
+var _ = require('underscore');
+var sequelize = require('sequelize');
+var moment = require('moment');
+
+
+exports.dsrSubmit = function(req, res){
+   var currentTime = new Date().getTime();
+    var filters = req.query;
+
+   var tm = parseInt(filters.Team);
+   
+    var currentUser = req.currentUser;
+    //var d = new Date(parseInt(filters.timestamp));
+   var endofDate = moment(parseInt(filters.timestamp)).endOf("day").toDate();
+
+  // var ed = new Date(endofDate).toISOString();
+  // var filters.totimestamp = new Date(endofDate).getTime();
+  //var ed =  moment(filters.totimestamp).tz('Asia/Kolkata').format('')
+  // res.send("end date---->"+filters.totimestamp);
+   //res.send("Team is --->"+tm);
+  
+
+   if(tm == 1){
+
+   whereClause(filters, currentUser,req,res, function(err, clause,q,limit,offset,al,status){
+    var m_meeting_count;
+    var m_calls_count;
+       if(err) {
+            response(res).failure(err);
+        }
+
+           
+
+        if(status == false)
+        {
+           response(res).failure("Not Authorized !");
+        }else
+        {
+            db.employee.findAll({
+
+                where: q || {},
+                include: [{ model : db.meeting, where: { meeting_type_id: { $ne: null },active:true,last_updated:{ $gte : parseInt(filters.timestamp) , $lt: parseInt(filters.totimestamp) } }, required: false },{ model: db.access_level }]
+            }).then(function(employees)
+            {
+
+
+                 var Emp = [];
+                //res.send(employees);
+                var objectMeeting =[];
+                var objReportingPerson = [];
+                var objAccessLevel = [];
+                var reviewStatusObject = [];
+                var empNameObject = [];
+                for(var i  in employees)
+                {
+
+
+                   // console.log("loop --->"+i);
+                   
+                    var emp =   employees[i];
+                    empNameObject[emp.employee_id] = emp.first_name || null;
+                    // console.log("employee------>"+emp);
+                          
+                            var Allmeetings= emp.meetings;
+                           // res.send(Allmeetings);
+                            var allOneCount = 0;
+                            var allMinusCount = 0;
+                            var allZerosCount = 0;
+                            var rs = null;
+                            for(var i in Allmeetings)
+                            {
+
+                                var meeting = Allmeetings[i];
+                                if(meeting.reviewStatus == 1)
+                                {
+                                    allOneCount++;
+                                } 
+                                if(meeting.reviewStatus == -1)
+                                {
+                                    allMinusCount++;
+                                } 
+                                if(meeting.reviewStatus == 0)
+                                {
+                                    allZerosCount++;
+                                } 
+                               
+
+                            }
+
+                             if (allMinusCount >= Allmeetings.length) {
+                                   rs = -1;
+                             }
+
+                             if (allOneCount >= Allmeetings.length) {
+                                   rs = 1;
+                             }
+
+                             if (allZerosCount >= Allmeetings.length) {
+                                   rs = 0;
+                             }
+
+
+
+                            
+                            reviewStatusObject[emp.employee_id] = rs;
+                            if(emp.access_level)
+                            {
+                                objAccessLevel[emp.employee_id] = emp.access_level.access_level || null;
+                            }
+
+                            objReportingPerson[emp.employee_id] = emp.reporting_person;
+
+                        
+                     db.sequelize.query("select count('meeting_type_id') as metting_count, employee_id, meeting_type_id from meeting where employee_id="+emp.employee_id+" AND meeting_type_id IS NOT NULL AND schedule >= "+parseInt(filters.timestamp)+" AND schedule < "+parseInt(filters.totimestamp)+" AND active= 1 group by meeting_type_id order by meeting_type_id",{ type: db.sequelize.QueryTypes.SELECT}).then(function(records)
+                     {
+                        var c_meetings = 0;
+                        var m_meetings = 0;
+                        var employeeId = null;
+
+                         
+                          //res.send("Emp id is ---->"+emp.employee_id+"   Dsr is------->"+1);
+                          for(var r in records)
+                          {
+                              var rc = records[r];
+                              //res.send(rc);
+                              if(rc.meeting_type_id == 1)
+                              {
+                                  m_meetings = rc.metting_count;
+
+                              }else if(rc.meeting_type_id == 18)
+                              {
+                                c_meetings = rc.metting_count;
+                              }
+
+
+                              employeeId = rc.employee_id;
+
+
+                          }
+
+                          var total = c_meetings + m_meetings;
+
+
+                         if(employeeId != null )
+                          {  
+                              var temp = {
+
+                                   EmployeeId : employeeId,
+                                   EmployeeName: empNameObject[employeeId],
+                                   ReviewStatus: reviewStatusObject[employeeId],
+                                   CallCount : c_meetings,
+                                   MeetingCount : m_meetings,
+                                   Total : total,
+                                   AccessLevel: objAccessLevel[employeeId],
+                                   ReportingPerson: objReportingPerson[employeeId],
+                                   Initial_Create: null,
+                                   Last_Updated : null
+
+
+
+                              };
+
+
+
+                               objectMeeting.push(temp);
+                         }
+                         
+
+                       
+
+                     });
+
+
+
+                }
+               
+
+               setTimeout(function(){
+
+                   res.json({
+                      success: true,
+                      ErrorCode : 100,
+                      message: 'completed sucessfully',
+                      items: objectMeeting,
+                      recordCount: objectMeeting.length,
+                      ServerCurrentTime: new Date().getTime(),
+                     
+                      });
+               },1000);
+                 
+
+            }).catch(function(err)
+            {
+              response(res).failure(err);
+            });
+
+
+        }
+
+
+
+   });
+  }else if(tm == 0)
+  {
+
+      whereClause(filters, currentUser,req,res, function(err, clause,q,limit,offset,al,status){
+
+            if(err) 
+            {
+                response(res).failure(err);
+            }
+
+
+            if(status == false)
+            {
+               response(res).failure("Not Authorized !");
+            }
+            else
+            {
+
+                db.meeting.findAll(
+                {
+
+                    where: {employee_id : parseInt(filters.EmployeeId) , meeting_type_id: 1 , active:true,  $or: [{reviewStatus: 0}, {reviewStatus: 1}], schedule: { $gte : parseInt(filters.timestamp), $lt : parseInt(filters.totimestamp)} },
+                    include: [{ model: db.lead , where: {active: true }, required : false, include: [ { model: db.product },{ model: db.meeting, where: { meeting_type_id: 1 , $or: [{ reviewStatus: 0 } , { reviewStatus: 1 }]  },required :false } ] },{ model: db.note },{model: db.contact},{model: db.agent },{model: db.employee ,include: [ { model:db.access_level  }]}]
+
+                }).then(function(meetings)
+                {
+                  
+                    // console.log("ob length--->"+meetings.length);
+
+                    //res.send(meetings);
+
+                     
+                    var obMeeting = [];
+                    for(var i in meetings)
+                    {
+
+                        var meeting = meetings[i];
+                        var meetingCount = 0;
+                        var product_name = null;
+                        var amount = null;
+                        var purpose = null;
+                        var duration = null;
+                        var location = null;
+                        var followup = null;
+                        var note = null;
+                        var contact_name = null;
+                        var reviewStatus = null;
+                        var isAgentMeeting = 0;
+                      
+                        if(meeting.lead && meeting.lead.meetings)
+                        {
+                            meetingCount = meeting.lead.meetings.length;
+                            if(meeting.lead.product){
+                                product_name = meeting.lead.product.product_name || null;
+                            }
+                            
+                            amount = meeting.lead.amount || null;
+                           
+
+
+
+                        }
+                        if(meeting.contact)
+                        {
+                            contact_name = meeting.contact.name || null;
+                            isAgentMeeting = 0;
+                        }else if(meeting.agent)
+                        {
+                              contact_name = meeting.agent.name || null;
+                              isAgentMeeting = 1;
+                        }
+
+                            purpose = meeting.purpose || null;
+                            duration = meeting.q2 || null;
+                            location = meeting.location || null;
+                            followup = meeting.q3 || null;
+                            note = meeting.note || null;
+                            reviewStatus = meeting.reviewStatus || null;
+
+                            var access_level = null;
+                            var reporting_person = null;
+                            var employeeName = null;
+
+                         if(meeting.employee && meeting.employee.access_level)
+                         {
+                            access_level = meeting.employee.access_level.access_level;
+
+
+                         } 
+                         if(meeting.employee)
+                         {
+                             reporting_person = meeting.employee.reporting_person;
+                             employeeName = meeting.employee.first_name || null;
+                         }  
+
+                        var tempOb = {
+
+                           EmployeeId: meeting.employee_id,
+                           EmployeeName: employeeName,
+                           Client: contact_name,
+                           Product: product_name,
+                           Amount: amount,
+                           MeetingCount : meetingCount,
+                           Purpose : purpose,
+                           Duration: duration,
+                           Location: location,
+                           FollowUp: followup,
+                           ReviewStatus:reviewStatus,
+                           IsAgentMeeting:isAgentMeeting,
+                           Notes: note,
+                           AccessLevel: access_level,
+                           ReportingPerson: reporting_person,
+                           Initial_Create: null,
+                           Last_Updated: null
+
+                           //lU: meeting.last_updated
+
+
+                        };
+
+                        obMeeting.push(tempOb);
+                        
+
+
+
+                    }
+
+
+                setTimeout(function(){
+
+                   res.json({
+                      success: true,
+                      ErrorCode : 100,
+                      message: 'completed sucessfully',
+                      items: obMeeting,
+                      recordCount: obMeeting.length,
+                      ServerCurrentTime: new Date().getTime(),
+                     
+                      });
+               },1000);
+
+
+
+                   
+                    
+
+                });
+            }
+
+
+
+
+      });
+
+
+
+  }else
+  {
+
+      response(res).failure("Invalid post values !");
+
+  }
+
+     
+
+};
+
+
+
+
+var whereClause = function (filters, currentUser,req,res,callback) {
+   var clause = [{  }];
+     var empArray = [];
+     var emp = null;
+     var q = null;
+     var limit = 5;
+     var offset = 0;
+    // if (filters.timeStamp) {
+    //     clause.push(sequelize.or([{ 'last_updated': { $ne: null } }, { 'last_updated': { $gte: filters.timeStamp } }], [{ 'last_updated': null }, { 'initial_create': { $gte: filters.timeStamp } }]));
+    // }
+
+    db.access_level.findOne({
+        where : { employee_id : parseInt(filters.EmployeeId) },
+        attributes : ['access_level'],
+        group : ['access_level']
+
+    }).then(function(al)
+    {
+        var team = parseInt(filters.Team);
+
+
+
+         if(al && al.access_level == 2 &&  team == 1 )
+         {
+              // condition 1 
+              // console.log("condition 1 is called ----------->");
+              empArray.push(parseInt(currentUser.EmployeeId));
+              empArray.push(parseInt(filters.EmployeeId));
+          
+
+            db.employee.findAll(
+            {
+                where : { reporting_person : parseInt(filters.EmployeeId) },
+                attributes : ['employee_id']
+
+            }).then(function(emp)
+            {
+
+                emp.map(function(item)
+                {
+                    empArray.push(item.employee_id);
+
+                });
+                db.employee.findAll(
+                {
+                    where : { reporting_person : { in : empArray }  }
+
+                }).then(function(empS)
+                {
+
+
+                    if(empS)
+                    {
+                         empS.map(function(itemS)
+                         {
+                            empArray.push(itemS.employee_id);
+
+                         });
+
+                    }
+
+                    // console.log("Emp Array is--->"+empArray);
+
+
+
+
+                     if(filters.timestamp)
+                     {
+            
+                             q = { employee_id : { in: empArray } };
+                
+                          
+                             callback(null, clause,q,limit,offset,al,true);
+
+         
+                      }else
+                      {
+
+                             q = { employee_id : { in: empArray }};
+                            
+
+                             callback(null, clause,q,limit,offset,al,true);
+                      }
+
+
+
+
+
+                });
+
+               
+
+
+            });
+
+         }else if((al && al.access_level == 2 && team == 0) || ((al && al.access_level == 1)  && (team ==1 || team == 0)) ) 
+         {
+            // condition 2 
+
+
+            
+
+            if(filters.timestamp)
+            {
+
+                    q = { employee_id : parseInt(filters.EmployeeId)  };
+                     
+                    callback(null, clause,q,limit,offset,al,true);
+
+            }else
+            {
+                q = { employee_id : parseInt(filters.EmployeeId) };
+                     
+                callback(null, clause,q,limit,offset,al,true);
+               
+
+            }
+
+            
+         }else
+         {
+            
+             callback(null, clause,q,limit,offset,al,false);
+          }
+         
+        
+        
+        
+
+    });
+};

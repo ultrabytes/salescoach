@@ -1,0 +1,1157 @@
+"use strict";
+var async = require('async');
+var db = require('../../models');
+var response = require('../../helpers/response');
+var _ = require('underscore');
+var moment = require('moment');
+var sequelize = require('sequelize');
+var currentTime = new Date().getTime();
+var log = require("../../api_logs/create_logs");
+var logFile = "lead_log.txt";
+
+
+
+
+exports.all = function (req, res) {
+
+    var filters = req.query;
+    var currentUser = req.currentUser;
+    var currentTime = new Date().getTime();
+
+
+    whereClause(filters, currentUser, function (err, clause,q,limit,offset,al,status) {
+        if (err) {
+  
+             var error = {
+                      "success": false,
+                      "ErrorCode": 116,
+                      "message": "fail",
+                      "ServerCurrentTime": new Date().getTime(),
+                      "error": err
+             };
+             log.run(req,error,logFile,currentTime);
+            response(res).failure(err);
+        }
+        if(status == false)
+        {
+
+             log.run(req,response(res).customError("Not Authorized !"),logFile,currentTime);
+
+
+            response(res).failure("Not Authorized !");
+        }
+        else {
+            db.lead.findAndCountAll({
+                where: q || {},
+                include: [{
+                  model: db.organization,
+                     
+                },
+                {model: db.contact,where:{ $and: [{contact_id: { $ne : null }}, { active: true }] }, include:[db.organization]},
+                {model: db.lead_stage_calculation },
+                {model: db.note,where: {active: true}, required:false }
+                ],
+                limit: limit , offset: offset,
+                order: [["last_updated","ASC"]]
+
+            }).then(function(leads){
+
+              //res.send(leads);
+
+                
+                var items = leads.rows.map(function(item){  
+                var obContact;
+                var obOrganization;
+                var obLeadStageCalculation;
+                var obNotes;
+
+                    try{
+
+                       obContact = returnContactForGet(item.contact,req);
+
+                    }catch(e)
+                    {
+                        obContact = item.contact;
+                    }
+
+                    try{
+
+                       obNotes = returnNotes(item.notes,req);
+                    }catch(e){
+                        
+                        obNotes = item.notes;
+                    }
+
+                   try{
+                        obOrganization = returnOrganization(item.organization,req);
+                   }catch(e)
+                   {      // console.log("error is -->"+e);
+                          obOrganization = item.organization;
+                   }
+
+                   try{
+
+                       obLeadStageCalculation = returnLeadStageCalcuation(item.lead_stage_calculations,req);
+                   }catch(e){
+
+                        obLeadStageCalculation = item.lead_stage_calculations;
+                   }
+
+                 
+                    //res.send(item.contact);
+                    if(item.employee_id == filters.emp_id)
+                    {
+                            var IsReassigned = 0;
+                    }else
+                    {
+                            var IsReassigned = 1;
+                    }
+                   
+                    return item.toModel(obContact,obOrganization,obLeadStageCalculation,obNotes,IsReassigned); 
+                 });
+                var moreRecordsAvailable = false;
+
+                if(leads.count > leads.rows.length)
+                {
+                     moreRecordsAvailable = true;
+                }
+
+                
+                
+
+                var resJson = {
+                        success: true,
+                        ErrorCode : 100,
+                        message: 'completed sucessfully',
+                        items: items,
+                        recordCount: items.length,
+                        ServerCurrentTime: currentTime,
+                        moreRecordsAvailable: moreRecordsAvailable
+                };
+                log.run(req,resJson,"lead_log.txt",currentTime);
+
+                res.json(resJson);
+
+                
+            }).catch(function(err){
+
+                 var error = {
+                      "success": false,
+                      "ErrorCode": 116,
+                      "message": "fail",
+                      "ServerCurrentTime": currentTime,
+                      "error": err
+                 };
+
+                 log.run(req,error,logFile,currentTime);
+                response(res).failure(err);
+            });
+        }
+    });
+
+
+};
+
+exports.createOrUpdate = function (req, res) {
+    var Model = req.body;
+
+    var id = req.params.id;
+    var action = "";
+    var currentTime = new Date().getTime();
+      if ((id && id != 0)) {
+        action = "update";
+     getAuthorizedUsers(req,res,function(status)
+    {
+      
+          //res.send("status is ------>"+status);
+          if(status == true)
+          {
+
+
+                 db.lead.findById(id)
+                  .then(function (lead) {
+                      toEntityUpdate(lead, Model, req.currentUser,action)
+                          .save()
+                          .then(function (entity) {
+
+                              log.run(req,entity.toModelUpdate(),"lead_log.txt");
+                              response(res).data(entity.toModelUpdate());
+                          })
+                          .catch(function (err) {
+
+                               var error = {
+                                    "success": false,
+                                    "ErrorCode": 116,
+                                    "message": "fail",
+                                    "ServerCurrentTime": currentTime,
+                                    "error": err
+                               };
+
+                              log.run(req,error,logFile,currentTime);
+                              response(res).failure(err);
+                          });
+                  })
+                  .catch(function (err) {
+
+                      log.run(req,response(res).customError(err),logFile,currentTime);
+                      response(res).failure(err);
+                  });
+
+            }else
+            {
+
+                 log.run(req,response(res).customError("Not Authorized !"),logFile,currentTime);
+                 response(res).failure("Not Authorized !");
+
+            }
+       
+         
+    
+
+
+    });
+   }
+    else {
+             action = "create";
+             var reqInfo = { cont_id : null ,org_id : null ,currentTime : currentTime  };
+
+             if(req.body.Organization)
+             {
+                createOrganization(req,res,reqInfo);
+             }
+
+             if(req.body.Contact)
+             {
+                setTimeout(function()
+                {
+                         createContact(req,res,reqInfo);
+                },2000);
+               
+             }
+             var localId = req.body.LocalId || null;
+
+              setTimeout(function(){
+
+                      db.lead.build(toEntity({}, Model, req.currentUser,action,reqInfo.cont_id,reqInfo.org_id))
+                            .save()
+                            .then(function (entity) {
+                              db.lead.find({
+                                where : { lead_id : entity.lead_id  },
+                                include : [
+                                   { all : true }
+                                ],
+
+                              }).then(function(lds)
+                              {
+
+                                var obContact;
+                                var obOrganization;
+                                var obLeadStageCalculation;
+                                var obNotes;
+
+                                try{
+                                 obContact = returnContact(lds.contact);
+
+                                 log.run(req,obContact,"contact_log.txt");
+
+                                }catch(e)
+                                {
+                                    obContact = lds.contact;
+                                    if(req.body.ContactId)
+                                    {
+                                        db.contact.find(
+                                       {
+                                          where: { contact_id : req.body.ContactId }
+                                           
+                                       }).then(function(c)
+                                       {
+                                         try{
+                                            obContact = returnContact(c,req);
+                                            reqInfo.cont_id = obContact.ContactId;
+                                            //reqInfo.cont_id = req.body.ContactId;
+                                         }catch(e)
+                                         {
+                                            obContact = null;
+                                         }
+                              
+
+                                        });
+
+                                    }
+
+                                }
+
+                                try{
+                                    obOrganization = returnOrganization(lds.organization,req);
+
+                                    log.run(req,obOrganization,"organization_log.txt");
+
+                                }catch(e)
+                                {
+                                   obOrganization = lds.organization
+
+                                   if(req.body.OrganizationId)
+                                   {
+                                      db.organization.find(
+                                      {
+                                          where : { organization_id : req.body.OrganizationId}
+                                      }).then(function(o)
+                                      {
+                                        try{
+                                           obOrganization = returnOrganization(o,req);
+                                           reqInfo.org_id = obOrganization.OrganizationId;
+
+                                        }catch(e)
+                                        {
+                                           obOrganization = null;
+                                        }
+
+                                      });
+                                   }
+                                }
+                                  setTimeout(function(){
+
+                                    db.lead.update({ contact_id : reqInfo.cont_id , organization_id : reqInfo.org_id  },
+                                    {
+                                      where : { lead_id : lds.lead_id }
+
+                                    }).then(function(l)
+                                    {
+                                      var nO = req.body.Notes || null;
+
+                                      createNotes(nO,req,res,entity,reqInfo,function(nO){
+
+                                           obNotes = nO;
+
+                                           if(req.body.LeadStageCalculation){
+                                        
+                                            try{
+                                              createLeadStageCalculations(req.body.LeadStageCalculation,req,res,entity,obContact,obOrganization,obNotes,null,localId);
+                                           }catch(e){
+
+                                               log.run(req,response(res).customError(e),logFile);
+                                               response(res).failure(e);
+                                           }
+
+                                
+
+                                       }else{
+                                          log.run(req,entity.toModelPost(obContact,obOrganization,null,obNotes,null,localId),"lead_log.txt");
+                                          response(res).data(entity.toModelPost(obContact,obOrganization,null,obNotes,null,localId));
+                                       }
+
+
+                                      });
+
+                                        
+                                       
+                                   
+
+                                    }).catch(function(err){
+                                         log.run(req,response(res).customError(err),logFile);
+                                         response(res).failure(err);
+                                    });
+
+                                  },1000);
+                                   
+                              });
+                            })
+                            .catch(function (err) {
+
+                                log.run(req,response(res).customError(err),logFile);
+                                response(res).failure(err);
+                            });
+                    
+                },3000);
+             
+    }
+};
+
+exports.get = function (req, res) {
+    var id = req.params.id;
+    db.lead.find({
+        where: {
+            lead_id: id
+        },
+        include: [
+            { all: true },
+        ]
+    }).then(function (entity) {
+        //res.send(entity);
+        var obContact;
+        var obOrganization;
+         try{
+            obContact = returnContact(entity.contact);
+
+        }catch(e)
+        {
+            obContact = entity.contact
+        }
+
+       try{
+            obOrganization = returnOrganization(entity.organization,req);
+       }catch(e)
+       {      // console.log("error is -->"+e);
+              obOrganization = entity.organization;
+       }
+      
+        log.run(req,entity.toModel(obContact,obOrganization),"lead_log.txt");
+        response(res).data(entity.toModel(obContact,obOrganization));
+    }).catch(function (err) {
+        log.run(req,response(res).customError(err),logFile);
+        response(res).failure(err);
+    });
+};
+
+exports.delete = function (req, res) {
+    var currentTime = new Date().getTime();
+    var id = req.params.id;
+    db.lead.findById(id)
+            .then(function (object) {
+                object.active = false;
+                object.last_updated = currentTime;
+                object.save()
+                    .then(function (entity) {
+                        db.meeting.update({
+
+                          lead_id: null,
+                          last_updated:currentTime
+
+                        },{
+                        
+                           where : { lead_id: id }
+                        }).then(function(lu)
+                        {
+                            db.task.update({
+                              lead_id: null,
+                              last_updated: currentTime
+
+                            },{
+                                where : { lead_id: id }
+                            }).then(function(tu)
+                            {
+                                db.note.update({
+
+                                   lead_id: null,
+                                   last_updated: currentTime
+
+
+                                },{
+
+                                   where : { lead_id: id }
+                                }).then(function(nu)
+                                {
+                                    
+                                    log.run(req,response(res).returnSuccess(),"lead_log.txt")
+                                    response(res).success();
+                                });
+
+                            });
+
+                        });
+                        //response(res).success();
+                    })
+                    .catch(function (err) {
+                        log.run(req,response(res).customError(err),logFile);
+                        response(res).failure(err);
+                    });
+            })
+            .catch(function (err) {
+                log.run(req,response(res).customError(err),logFile);
+                response(res).failure(err);
+            });
+};
+var toEntity = function (entity, data, currentUser,action,contact_id,org_id) {    
+
+    entity.name = data.Name;
+    entity.account_id = currentUser.AccountId;
+    entity.amount = data.Amount;     
+    entity.isWon = data.Iswon;
+    entity.expectedClouserDate = data.Expectedclouserdate;
+    entity.expectedClouserDateTime = data.Expectedclouserdatetime;
+    entity.isFresh = data.Isfresh;
+    entity.commissionRate = data.Commissionrate;
+    entity.lostReason = data.Lostreason;
+    entity.prospectsDate = data.Prospectsdate;
+    entity.contactedDate = data.Contacteddate;
+    entity.proposalGivenDate = data.Proposalgivendate;
+    entity.proposal_finalized_date = data.ProposalFinalizedDate;
+    entity.inNegotiationDate = data.Innegotiationdate;
+    entity.wonDate = data.Wondate;
+    entity.lostDate = data.Lostdate;
+    entity.currentState = data.Currentstate;
+    entity.contact_id = contact_id;
+    entity.amc_id = data.AmcId;
+    entity.lead_source_id = data.LeadSourceId;
+    entity.lead_source_sub_string = data.LeadSourceSubString;
+    entity.employee_id = currentUser.EmployeeId;
+    entity.product_id = data.ProductId;
+    entity.organization_id = org_id;
+    entity.won_lost_by_employee_id = data.WonLostByEmployeeId;
+    entity.won_lost_by_employee_name = data.WonLostByEmployeeName;
+    entity.last_updated = new Date().getTime();
+    if(action == "create")
+    {
+         entity.initial_create = new Date().getTime();
+         entity.last_updated = entity.initial_create;
+    }
+   
+    
+     
+    return entity;
+};
+
+
+
+
+
+var toEntityUpdate = function (entity, data, currentUser,action) {    
+
+    entity.name = data.Name;
+    entity.account_id = currentUser.AccountId;
+    entity.amount = data.Amount;     
+    entity.isWon = data.Iswon;
+    entity.expectedClouserDate = data.Expectedclouserdate;
+    entity.expectedClouserDateTime = data.Expectedclouserdatetime;
+    entity.isFresh = data.Isfresh;
+    entity.commissionRate = data.Commissionrate;
+    entity.lostReason = data.Lostreason;
+    entity.prospectsDate = data.Prospectsdate;
+    entity.contactedDate = data.Contacteddate;
+    entity.proposalGivenDate = data.Proposalgivendate;
+    entity.proposal_finalized_date = data.ProposalFinalizedDate;
+    entity.inNegotiationDate = data.Innegotiationdate;
+    entity.wonDate = data.Wondate;
+    entity.lostDate = data.Lostdate;
+    entity.currentState = data.Currentstate;
+    entity.contact_id = data.ContactId;
+    entity.amc_id = data.AmcId;
+    entity.lead_source_id = data.LeadSourceId;
+    entity.lead_source_sub_string = data.LeadSourceSubString;
+    //entity.employee_id = currentUser.EmployeeId;
+    entity.product_id = data.ProductId;
+    entity.organization_id = data.OrganizationId;
+    entity.won_lost_by_employee_id = data.WonLostByEmployeeId;
+    entity.won_lost_by_employee_name = data.WonLostByEmployeeName;
+    entity.last_updated = new Date().getTime();
+    return entity;
+};
+
+/*var whereClause = function (filters, currentUser, callback) {
+    var clause = [{  }, { employee_id: currentUser.EmployeeId }];
+    if (filters.timeStamp) {
+        clause.push(sequelize.or([{ 'last_updated': { $ne: null } }, { 'last_updated': { $gte: filters.timeStamp } }], [{ 'last_updated': null }, { 'initial_create': { $gte: filters.timeStamp } }]));
+    }
+    callback(null, clause);
+};*/
+
+
+function createOrganization(req,res,reqInfo)
+{
+     var objectOrganization = req.body.Organization;
+     objectOrganization.name = objectOrganization.Name;
+     objectOrganization.account_id = req.currentUser.AccountId;
+     objectOrganization.short_name = objectOrganization.ShortName;
+     objectOrganization.type = objectOrganization.Type;
+     objectOrganization.phone_number = objectOrganization.PhoneNumber;
+     objectOrganization.address = objectOrganization.Address;
+     objectOrganization.employee_id = req.currentUser.EmployeeId;
+     objectOrganization.initial_create = reqInfo.currentTime;
+     objectOrganization.last_updated = reqInfo.currentTime;
+     db.organization.create(objectOrganization).then(function(org)
+     {
+        reqInfo.org_id = org.organization_id;
+
+     });
+
+
+}
+
+function createContact(req,res,reqInfo)
+{
+      var objectContact = req.body.Contact;
+      objectContact.name = objectContact.Name;
+      objectContact.account_id = req.currentUser.AccountId;
+      objectContact.number = objectContact.Number;
+      objectContact.email = objectContact.Email;
+      objectContact.address = objectContact.Address;
+      objectContact.isLink = objectContact.IsLink;
+      objectContact.employee_id = req.currentUser.EmployeeId;
+      objectContact.organization_id = reqInfo.org_id || null;
+      objectContact.initial_create = reqInfo.currentTime;
+      objectContact.last_updated =  reqInfo.currentTime;
+     db.contact.create(objectContact).then(function(cont)
+     {
+
+        reqInfo.cont_id = cont.contact_id;
+
+     });
+
+}
+
+
+function returnContact(obContact)
+{
+    var jsonContact = {
+       
+        ContactId: obContact.contact_id,
+        Name : obContact.name,
+        Number : obContact.number,
+        Email : obContact.email,
+        Address : obContact.address,
+        IsLink : obContact.isLink,
+        OrganizationId: obContact.organization_id,
+        EmployeeId:obContact.employee_id,
+        InitialCreate:obContact.initial_create,
+        LastUpdated:obContact.last_updated,
+        //Active: obContact.active
+
+    }
+
+
+    return jsonContact;
+
+
+}
+
+function returnLeadStageCalcuation(obLSC,req){
+  
+      var o = obLSC.map(function (c) {
+                    return c.toModel();
+                });
+      return o;
+
+}
+
+function returnNotes(obNote,req){
+
+
+   var o = obNote.map(function (c) {
+                    return c.toModel();
+                });
+      return o;
+}
+
+function returnNotesObject(obNotes,reqInfo)
+{
+    // console.log("Temp notes is --->"+reqInfo.temp_notes);
+  
+    var realObNotes = [];
+    var tempJson = {};
+
+    for(var i in obNotes)
+    {
+        var note  = obNotes[i];
+
+        tempJson = {
+            NoteId : note.note_id,
+           // AccountId: note.account_id || null,
+            Addedon : note.addedOn,
+            AgentId: note.agent_id,
+            ContactId : note.contact_id,
+            EmployeeId: note.employee_id,
+            LeadId: note.lead_id,
+            IsRemoteSuccess : reqInfo.temp_notes[i].IsRemoteSuccess || null,
+            LocalId:reqInfo.temp_notes[i].LocalId || null,
+            RemoteExtra:reqInfo.temp_notes[i].RemoteExtra || null,
+            RemoteMessage:reqInfo.temp_notes[i].RemoteMessage || null,
+            MeetingId : note.meeting_id,
+            Text: note.text,
+            InitialCreate : note.initial_create,
+            LastUpdated : note.last_updated
+
+       }
+
+        realObNotes.push(tempJson);
+
+    }
+
+    return realObNotes;
+     
+}
+
+
+var createNotes = function(oNotes,req,res,entity,reqInfo,NoteResponse){
+  if(req.body.Notes){
+   var objectNotes = oNotes;
+    var realObjectNotes = [];
+
+    var tempJson;
+    var tempNotes = [];
+
+    for(var i in objectNotes)
+    {
+       
+        var note = objectNotes[i];
+        tempNotes.push({ IsRemoteSuccess : note.IsRemoteSuccess,LocalId : note.LocalId , RemoteExtra : note.RemoteExtra , RemoteMessage : note.RemoteMessage   });
+        tempJson = {  
+          account_id: req.currentUser.AccountId,
+          addedOn : note.Addedon || null,
+          agent_id : note.AgentId || null,
+          contact_id : note.ContactId || null,
+          lead_id : entity.lead_id || null,
+          meeting_id : note.MeetingId || null,
+          employee_id : note.EmployeeId || req.currentUser.EmployeeId,
+          initial_create : entity.initial_create,
+          last_updated : entity.last_updated,
+          text: note.Text
+
+       }
+
+        realObjectNotes.push(tempJson);
+    }
+
+   // res.send(realObjectNotes);
+    reqInfo.temp_notes = tempNotes;
+
+   db.note.bulkCreate(realObjectNotes).then(function(notes)
+    {
+
+     
+            db.note.findAll({
+               where : {  lead_id : entity.lead_id }
+            }).then(function(n)
+            {
+                 
+                var not = returnNotesObject(n,reqInfo);
+
+                log.run(req,not,"note_log.txt");
+                NoteResponse(not);
+ 
+
+            });
+                                             
+    }).catch(function(err){
+
+         response(res).failure(err);
+    });
+  }else{
+
+     NoteResponse(null);
+  }
+
+
+
+}
+
+
+
+
+function createLeadStageCalculations(LeadStageCalculations,req,res,entity,obContact,obOrganization,NotesOb,ir,localId){
+
+  var objectLSC = req.body.LeadStageCalculation;
+    var realObjectLSC = [];
+
+    var tempJson;
+   
+
+     for(var i in objectLSC)
+    {
+       
+        var lsc = objectLSC[i];
+       
+        tempJson = {  
+          account_id: req.currentUser.AccountId,
+          active : lsc.Active || null,
+          number_of_days : lsc.NumberOfDays || null,
+          stage_name : lsc.StageName || null,
+          status : lsc.Status || null,
+          start_date : lsc.StartDate || null,
+          end_date : lsc.EndDate || null,
+          initial_position_level: lsc.InitialPositionLevel || null,
+          updated_position_level: lsc.UpdatedPositionLevel || null,
+          stage_setting_id: lsc.StageSettingId || null,
+          lead_id : entity.lead_id,
+          employee_id: entity.employee_id,
+          initial_create : entity.initial_create,
+          last_updated : entity.last_updated
+          
+
+       }
+
+        realObjectLSC.push(tempJson);
+    }
+
+    db.lead_stage_calculation.bulkCreate(realObjectLSC).then(function(lsc){
+
+        db.lead_stage_calculation.findAll({
+
+          where: { lead_id : entity.lead_id }
+        }).then(function(lscObject){
+             var o = null;
+               if(lscObject){
+                  o = lscObject.map(function (c) {
+                    return c.toModel();
+                });
+               }
+
+               log.run(req,o,"lead_stage_calculation.log.txt");
+               
+               log.run(req,entity.toModelPost(obContact,obOrganization,o,NotesOb,ir,localId),"lead_log.txt");
+               response(res).data(entity.toModelPost(obContact,obOrganization,o,NotesOb,ir,localId));
+               
+        }).catch(function(err){
+            response(res).failure(err);
+        });
+        
+        
+
+    }).catch(function(err){
+ 
+         response(res).failure(err);
+    });
+
+    
+}
+
+
+function returnContactForGet(obContact,req)
+{
+  var orgOb = null;
+
+       try{
+         orgOb = returnOrganization(obContact.organization,req);
+
+
+       }catch(e)
+       {
+          orgOb = null;
+       }
+
+        var jsonContact = {
+       
+        ContactId: obContact.contact_id,
+        Name : obContact.name,
+        Number : obContact.number,
+        Email : obContact.email,
+        Address : obContact.address,
+        IsLink : obContact.isLink,
+        OrganizationId: obContact.organization_id || null,
+        Organization: orgOb || null,
+        EmployeeId:obContact.employee_id,
+        InitialCreate:obContact.initial_create,
+        LastUpdated:obContact.last_updated,
+        //Active: obContact.active
+
+    }
+
+
+     return jsonContact;
+
+
+      
+
+
+   
+
+
+}
+
+function returnOrganization(obOrganization,req)
+{
+    var jsonOrganization = {
+
+        OrganizationId: obOrganization.organization_id,
+        Name: obOrganization.name || null,
+        ShortName: obOrganization.short_name || null,
+        Type: obOrganization.type || null,
+        PhoneNumber: obOrganization.phone_number || null,
+        Address: obOrganization.address || null,
+        EmployeeId : obOrganization.employee_id || null,
+        InitialCreate: obOrganization.initial_create,
+        LastUpdated: obOrganization.last_updated
+    }
+
+    return jsonOrganization;
+}
+
+
+
+var whereClause = function (filters, currentUser, callback) {
+   var clause = [{  }];
+     var empArray = [];
+     var emp = null;
+     var q = null;
+     var limit = 5;
+     var offset = 0;
+    // if (filters.timeStamp) {
+    //     clause.push(sequelize.or([{ 'last_updated': { $ne: null } }, { 'last_updated': { $gte: filters.timeStamp } }], [{ 'last_updated': null }, { 'initial_create': { $gte: filters.timeStamp } }]));
+    // }
+
+    db.access_level.findOne({
+        where : { employee_id : currentUser.EmployeeId },
+        attributes : ['access_level'],
+        group : ['access_level']
+
+    }).then(function(al)
+    {
+
+         if(al && al.access_level == 2)
+         {
+          // condition 1 
+          // console.log("condition 1 is called ----------->");
+          
+
+            db.employee.findAll(
+            {
+                where : { reporting_person : currentUser.EmployeeId },
+                attributes : ['employee_id']
+
+            }).then(function(emp)
+            {
+                emp.map(function(item)
+                {
+                    empArray.push(item.employee_id);
+
+                });
+                db.employee.findAll(
+                {
+                    where : { reporting_person : { in : empArray }  }
+
+                }).then(function(empS)
+                {
+
+
+                    if(empS)
+                    {
+                         empS.map(function(itemS)
+                         {
+                            empArray.push(itemS.employee_id);
+
+                         });
+
+                    }
+
+                    // console.log("Emp Array is--->"+empArray);
+
+
+                     if(filters.timestamp && filters.emp_id)
+                     {
+                          empArray.push(currentUser.EmployeeId);
+                          var empId = parseInt(filters.emp_id);
+                
+                          // console.log("INdex  Is--------->"+empArray.indexOf(empId));
+                           if(empArray.indexOf(empId) != -1)
+                           {
+
+                              q = {$or:[{employee_id: filters.emp_id,last_updated : { $gt : filters.timestamp }}, {lead_id : { in : [sequelize.literal('select lead_id from lead_log where old_employee_id ='+filters.emp_id)]  } ,last_updated : { $gt : filters.timestamp } , active: true }]};
+                             callback(null, clause,q,limit,offset,al,true);
+
+
+                           }else
+                           {
+                              callback(null, clause,q,limit,offset,al,false);
+
+                           }
+         
+                        }else
+                        {
+
+                             q = { employee_id : currentUser.EmployeeId,active:true};
+                             if(filters.timestamp)
+                             {
+                                q = { employee_id : currentUser.EmployeeId ,last_updated : { $gt : filters.timestamp } ,active:true};
+                             }
+
+                             callback(null, clause,q,limit,offset,al,true);
+                        }
+
+
+
+
+
+                });
+
+               
+
+
+            });
+         }else if(al && al.access_level == 1)
+         {
+            // condition 2 
+
+             // console.log("condition 2 is called ----------->");
+
+            if(filters.timestamp && filters.emp_id)
+            {
+              // condition 3
+               // console.log("condition 3 is called ----------->");
+              if(currentUser.EmployeeId == filters.emp_id)
+              {
+                 //  condition 3.1 
+                  // console.log("condition 3.1 is called ----------->");
+                  q = {$or:[{employee_id: filters.emp_id,last_updated : { $gt : filters.timestamp }}, {lead_id : { in : [sequelize.literal('select lead_id from lead_log where old_employee_id ='+filters.emp_id)]  } ,last_updated : { $gt : filters.timestamp },active:true }]};
+                  callback(null, clause,q,limit,offset,al,true);
+
+              }else
+              {
+                // condition 3.2
+
+                 // console.log("condition 3.2 is called ----------->");
+                 callback(null, clause,q,limit,offset,al,false);
+              }
+
+
+            }else
+            {
+               // condition 4
+                // console.log("condition 4 is called ----------->");
+                 q = { employee_id : currentUser.EmployeeId ,active:true };
+                 if(filters.timestamp)
+                 {
+                    q = { employee_id : currentUser.EmployeeId ,last_updated : { $gt : filters.timestamp },active:true };
+                 }
+
+                 callback(null, clause,q,limit,offset,al,true);
+
+            }
+
+            //  q = { employee_id : currentUser.EmployeeId , active:true };
+
+            // if(filters.timestamp)
+            // {
+            //   q = { employee_id : currentUser.EmployeeId , active:true , last_updated : { $gt : filters.timestamp } };
+
+            // }
+            
+
+            
+         }else
+         {
+            // condition 5 
+             // console.log("condition 5 is called ----------->");
+             callback(null, clause,q,limit,offset,al,false);
+         }
+         
+        
+        
+        
+
+    });
+};
+
+var  getAuthorizedUsers = function(req,res,callback)
+{
+
+    var currentUser = req.currentUser;
+    var empArray = [];
+    db.lead.findOne({
+
+      where: { lead_id : parseInt(req.params.id) },
+      attributes: ['employee_id']
+    }).then(function(ld)
+    {
+
+        // console.log(ld);
+
+       if(ld && ld.employee_id)
+       {
+        
+            db.access_level.findOne({
+
+              where : { employee_id : currentUser.EmployeeId },
+              attributes : ['access_level'],
+              group : ['access_level']
+
+
+            }).then(function(al)
+            {
+                 if(al && al.access_level == 2)
+                 {
+                    empArray.push(currentUser.EmployeeId);
+                    db.employee.findAll({
+
+                          where : { reporting_person : currentUser.EmployeeId },
+                          attributes : ['employee_id']
+
+
+                    }).then(function(emp)
+                    {
+                      if(emp){
+                         
+                          emp.map(function(item)
+                          {
+                              empArray.push(item.employee_id);
+
+                          });
+
+                          db.employee.findAll({
+
+                            where : { reporting_person : { in : empArray }  }
+                          }).then(function(empS)
+                          {
+                           
+                            if(empS)
+                            {
+                               empS.map(function(itemS)
+                               {
+                                 
+                                  empArray.push(itemS.employee_id);
+
+                               });
+
+                             }
+                             
+
+                             var  empId = parseInt(ld.employee_id);
+
+                             if(empArray.indexOf(empId) != -1)
+                             {
+                                   callback(true);
+                                    
+
+                             }else
+                             {
+                                callback(false);
+                             }
+
+
+
+                          });
+
+                        } 
+                      
+
+                    });
+                 }else if(al && al.access_level == 1)
+                 {
+                        var  empId = parseInt(ld.employee_id);
+                        if(currentUser.EmployeeId ==  empId)
+                        {
+
+                             callback(true);
+                        }else
+                        {
+
+                            callback(false);
+                        }
+
+
+
+
+
+                 }else
+                 {
+
+
+                     callback(false);
+                 }
+                 
+
+
+            });
+
+
+       }else
+       {
+
+          response(res).failure("Lead not found !");
+       }
+
+    });
+
+
+
+
+
+}
